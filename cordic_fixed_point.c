@@ -29,64 +29,65 @@ vector: High 16 bits are x.  Low 16 bits are y. Application engineer assumed to 
 angle: assumed to be in range [-90,90] scaled to 32 bit accuracy (2^31)/90 */
 int32_t rotation(int32_t vector, int32_t angle){
 	register int i, d;
-	register int32_t cur_x, cur_y, last_x, last_y, int_z, rounding_mask, round_x, round_y;	
+	register int32_t cur_x, cur_y, int_z, rounding_mask, round_x, round_y;	
 	
 	rounding_mask = 0;
 	
-	last_x = vector >> 16;
-	vector = vector << 16;
-	last_y = vector >> 16;
+	round_x = vector >> 16;		// x is in top two bytes
+	vector = vector << 16;		// push low bytes to far left so negative will propagate
+	round_y = vector >> 16;		// y is now in top two bytes
 	
 	int_z = angle;
 	
+	// First iteration, no division or rounding required
 	d = 1;
 	if(int_z < 0) d = -1;
 	
-	cur_x = last_x - ((d*last_y)>>i);
-	cur_y = last_y + ((d*last_x)>>i);
+	cur_x = round_x - (d*round_y);
+	cur_y = round_y + (d*round_x);
 	int_z = int_z - (d*arctan_degrees[0]);
 	
-	last_x = cur_x;
-	last_y = cur_y;	
+	round_x = cur_x;
+	round_y = cur_y;	
 	
+	// Remaining iterations 
 	for(i = 1; i < ITERATIONS; i++){
 		d = 1;
 		if(int_z < 0) d = -1;
 		
-		printf("i = %i\tBefore: %i\n",i, last_x);
+		// if there are bits high in the soon to be truncated region
 		if(rounding_mask & round_x){
-			//round_x |= (1<<i);
-			printf("after: %i\tmask = %i\n", round_x, rounding_mask);
-		}
-		
+			round_x |= (1<<i);		// Von Neumann rounding
+		}		
 		if(rounding_mask & round_y){
-			//round_y |= (1<<i);
+			round_y |= (1<<i);		// Von Neumann rounding
 		}
 		
-		cur_x = last_x - ((d*last_y)>>i);
-		cur_y = last_y + ((d*last_x)>>i);
+		cur_x = cur_x - ((d*round_y)>>i);
+		cur_y = cur_y + ((d*round_x)>>i);
+		
 		int_z = int_z - (d*arctan_degrees[i]);
 		
-		last_x = round_x = cur_x;
-		last_y = round_y = cur_y;	
+		round_x = cur_x;
+		round_y = cur_y;		
 		
+		// add another 1 to the rounding mask
 		rounding_mask |= (1<<(i-1));
 	}
 	
-	last_x = last_x << 10;
-	last_x /= ITER_SCALE;
+	// ITER_SCALE is multiplied by 2^10 so shifting current values to compensate.
+	cur_x = cur_x << 10;
+	cur_x /= ITER_SCALE;	
+	cur_y = cur_y << 10;
+	cur_y /= ITER_SCALE;
 	
-	last_y = last_y << 10;
-	last_y /= ITER_SCALE;
+	// mask the y value to be 16 bits long (should be anyway)
+	cur_y &= TWO_BYTE_MASK;	
 	
-	last_x &= TWO_BYTE_MASK;
-	last_y &= TWO_BYTE_MASK;	
+	cur_x = cur_x << 16;	// high two bytes of the returned value
+	cur_x |= cur_y;			// low two bytes of the returned value	
 	
-	last_x = last_x << 16;
-	last_x |= last_y;
-	
-	
-	return last_x;
+	return cur_x;
 }
 
 /*
