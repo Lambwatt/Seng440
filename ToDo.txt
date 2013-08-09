@@ -1,0 +1,5 @@
+-Generic c implementation Floats
+-C implementation FIXED POINT
+-FIXED point optimized
+-Fixed point assembler
+-Hardware implementation
