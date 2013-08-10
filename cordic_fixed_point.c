@@ -3,15 +3,19 @@
 #define ANGLE_MASK			0x7fffff
 #define ITER_SCALE			1686 			//1.64676 * 2^10
 #define TWO_BYTE_MASK		0xffff
+#define ABS(x)				(x > 0 ? x : -x)
 
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
-#include <math.h>
 
 /**** Prototypes *********************************************/
 int32_t rotation(int32_t, int32_t);
 int32_t vectoring(int32_t);
+int16_t arctan_fraction(int16_t, int16_t);
+int16_t arctan(int16_t);
+int16_t cos_cordic(int32_t angle);
+int16_t sin_cordic(int32_t angle);
 
 /**** Members ************************************************/
 /* To retain 16 bits of precision we need a minimum of 20 bits for
@@ -38,7 +42,7 @@ int32_t rotation(int32_t vector, int32_t angle){
 	vector = vector << 16;		// push low bytes to far left so negative will propagate
 	round_y = vector >> 16;		// y is now in top two bytes
 	
-	int_z = angle;
+	int_z = angle << ANGLE_SCALE;
 	
 	// First iteration, no division or rounding required
 	d = 1;
@@ -85,7 +89,7 @@ int32_t rotation(int32_t vector, int32_t angle){
 	cur_y &= TWO_BYTE_MASK;	
 	
 	cur_x = cur_x << 16;	// high two bytes of the returned value
-	cur_x |= cur_y;			// low two bytes of the returned value	
+	cur_x |= cur_y;			// low two bytes of the returned value
 	
 	return cur_x;
 }
@@ -116,8 +120,7 @@ int32_t vectoring(int32_t vector){
 	round_x = cur_x;
 	round_y = cur_y;	
 	
-	// Remaining iterations 
-	
+	// Remaining iterations
 	for(i = 1; i < ITERATIONS; i++){
 		d = -1;
 		if(cur_y < 0) d = 1;
@@ -143,12 +146,12 @@ int32_t vectoring(int32_t vector){
 	// ITER_SCALE is multiplied by 2^10 so shifting current values to compensate.
 	cur_x = cur_x << 10;
 	cur_x /= ITER_SCALE;	
-	
+
 	if(int_z & ANGLE_MASK){
 		int_z |= (1 << ANGLE_SCALE);
 	}
 	int_z = int_z >> ANGLE_SCALE;		// put angle into degrees
-	int_z &= TWO_BYTE_MASK;		// ensure it's 16 bits (should be anyway)
+	int_z &= TWO_BYTE_MASK;		// ensure it's 16 bits
 	
 	cur_x = cur_x << 16;	// Magnitude - high two bytes of returned value
 	cur_x |= int_z;			// Angle - low two bytes of the returned value
@@ -156,61 +159,114 @@ int32_t vectoring(int32_t vector){
 	return cur_x;
 }
 
+int16_t arctan_fraction(int16_t numerator, int16_t denominator){
+	int32_t temp = (denominator << 16) | (numerator & TWO_BYTE_MASK);
+	temp = vectoring(temp);
 
+	return temp;
+}
+
+/* x strictly greater than 0 */
+int16_t arctan(int16_t x){
+	return arctan_fraction(x,1);
+}
+
+/* angle in range [-90,90]
+ * First two base 10 digits are decimal*/
+int16_t cos_cordic(int32_t angle){
+	int32_t vector = (1 << 14) ;
+	vector = vector << 16;
+	vector = rotation(vector, angle);
+	vector = vector >> 16;
+	vector *= 100;
+
+	return (vector >> 14);
+}
+
+/* angle in range [-90,90]
+* First two base 10 digits are decimal*/
+int16_t sin_cordic(int32_t angle){
+	int32_t vector = (1 << 14) ;
+	vector = vector << 16;
+	vector = rotation(vector, angle);
+
+	//int16_t r =
+	vector = vector << 16;
+	vector = vector >> 16;
+	vector *= 100;
+
+	return (vector >> 14);
+}
 
 
 int main(void){
 	/* test rotation */
 	int16_t x, y;
 	int32_t vector, angle, result;
-	float final_x, final_y;
 	
-	x = -1 * (1<<14);
-	y = 0;
+
+	x =  (100<<6);
+	y =  (-100<<6);
 	vector = x << 16;
-	vector |= y;
+	vector |= (y & TWO_BYTE_MASK);
 	
-	angle = 90 << ANGLE_SCALE;
+	angle = -1;
 	result = rotation(vector,angle);
 	x = result >> 16;	
 	y = (int16_t)(result);	
 	
-	//final_x = (float)x / (float)(1<<14);
-	//final_y = (float)y / (float)(1<<14);
-	//printf("x = %f\ty = %f\n",final_x,final_y);
-	
-	if(x & 0x3f0){	// limiting Von Neumann Mask
-		x |= (1<<14);
+	if(x & 0x7f){
+		//x |= (1<<7);
 	}
-	x = x >> 14;
-	if(y & 0x3f0){
-		y |= (1<<14);
+
+	if(y & 0x7f){
+		//y |= (1<<7);
 	}
-	y = y >> 14;
+	y = y >> 6;
+	x = x >>6;
 	printf("x = %i\ty = %i\n",x,y);
 	
-	
-	// test vectoring
-	//int16_t x, y;
-	//int32_t vector, result;
-	//float final_x, final_y;
-	
-	y = 1<<14;
-	x = 0;
+	/* test vectoring */
+	x =  (100<<7);
+	y =  (100<<7);
 	vector = x << 16;
 	vector |= y;
 	
 	
 	result = vectoring(vector);
 	x = result >> 16;	
-	if(x & 0x3f0){	// limiting Von Neumann Mask
-		x |= (1<<14);
+	if(x & 0x7f){
+		x |= (1<<7);
 	}
-	x = x >> 14;
+	x = x >> 7;
 	y = (int16_t)(result);	
 	
-	final_x = (float)x / (float)(1<<14);
-	//final_y = (float)y / (float)(1<<14);
-	printf("magnitude = %x\tangle = %i\n",x,y);
+
+	printf("magnitude = %i\tangle = %i\n",x,y);
+
+	int16_t n = 10 << 8;
+	int16_t d = 20 << 8;
+
+	n = arctan_fraction(n,n);
+
+	printf("Angle = %i\n", n);
+
+	n = 20;
+
+	n = arctan(n);
+
+
+	printf("Angle = %i\n", n);
+
+	n = cos_cordic(0);
+
+	printf("cos = %i\n", n);
+
+	n = sin_cordic(90);
+
+	printf("sin  = %i\n", n);
+
 	return 0;
+
+
 }
