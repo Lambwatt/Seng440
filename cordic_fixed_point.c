@@ -1,5 +1,6 @@
 #define ITERATIONS			16	// 16 iterations for 16 bit precision
-#define ANGLE_SCALE			23860929		// (2^31)/90
+#define ANGLE_SCALE			24		// (2^24)
+#define ANGLE_MASK			0x7fffff
 #define ITER_SCALE			1686 			//1.64676 * 2^10
 #define TWO_BYTE_MASK		0xffff
 
@@ -16,12 +17,12 @@ int32_t vectoring(int32_t);
 /* To retain 16 bits of precision we need a minimum of 20 bits for
 intermediate values.  Will be using 32 bits instead. */
 
-/* each value in the array = arctan(2^-i) * 2^31/90 
+/* each value in the array = arctan(2^-i) * 2^24
 (Domain of convergence is -90...90) */
-int32_t const arctan_degrees[ITERATIONS] = {1074000000, 633900000, 334900000, 170000000,
-									85330000, 42710000, 21360000, 10680000,
-									5340000, 2670000, 1335000, 667544,
-									333772, 166886, 83443, 41722};
+int32_t const arctan_degrees[ITERATIONS] = {754974720, 445687602, 235489088, 119537938,
+									60000934, 30029717, 15018523, 7509720,
+									3754917, 1877470, 938734, 469367,
+									234684, 117342, 58671, 29335};
 									
 /**** Functions **********************************************/
 /* 
@@ -143,8 +144,10 @@ int32_t vectoring(int32_t vector){
 	cur_x = cur_x << 10;
 	cur_x /= ITER_SCALE;	
 	
-	
-	int_z /= ANGLE_SCALE;		// put angle into degrees
+	if(int_z & ANGLE_MASK){
+		int_z |= (1 << ANGLE_SCALE);
+	}
+	int_z = int_z >> ANGLE_SCALE;		// put angle into degrees
 	int_z &= TWO_BYTE_MASK;		// ensure it's 16 bits (should be anyway)
 	
 	cur_x = cur_x << 16;	// Magnitude - high two bytes of returned value
@@ -162,19 +165,30 @@ int main(void){
 	int32_t vector, angle, result;
 	float final_x, final_y;
 	
-	y = 1<<14;
-	x = 0;
+	x = -1 * (1<<14);
+	y = 0;
 	vector = x << 16;
 	vector |= y;
 	
-	angle = 1<<31;
+	angle = 90 << ANGLE_SCALE;
 	result = rotation(vector,angle);
 	x = result >> 16;	
 	y = (int16_t)(result);	
 	
-	final_x = (float)x / (float)(1<<14);
-	final_y = (float)y / (float)(1<<14);
-	printf("x = %f\ty = %f\n",final_x,final_y);
+	//final_x = (float)x / (float)(1<<14);
+	//final_y = (float)y / (float)(1<<14);
+	//printf("x = %f\ty = %f\n",final_x,final_y);
+	
+	if(x & 0x3f0){	// limiting Von Neumann Mask
+		x |= (1<<14);
+	}
+	x = x >> 14;
+	if(y & 0x3f0){
+		y |= (1<<14);
+	}
+	y = y >> 14;
+	printf("x = %i\ty = %i\n",x,y);
+	
 	
 	// test vectoring
 	//int16_t x, y;
@@ -189,10 +203,14 @@ int main(void){
 	
 	result = vectoring(vector);
 	x = result >> 16;	
+	if(x & 0x3f0){	// limiting Von Neumann Mask
+		x |= (1<<14);
+	}
+	x = x >> 14;
 	y = (int16_t)(result);	
 	
 	final_x = (float)x / (float)(1<<14);
 	//final_y = (float)y / (float)(1<<14);
-	printf("magnitude = %f\tangle = %i\n",final_x,y);
+	printf("magnitude = %x\tangle = %i\n",x,y);
 	return 0;
 }
