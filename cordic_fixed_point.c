@@ -180,6 +180,10 @@ int16_t cos_cordic(int32_t angle){
 	vector = vector >> 16;
 	vector *= 100;
 
+	if(vector & 0x3fff){
+		vector |= (1<<14);
+	}
+
 	return (vector >> 14);
 }
 
@@ -194,6 +198,10 @@ int16_t sin_cordic(int32_t angle){
 	vector = vector << 16;
 	vector = vector >> 16;
 	vector *= 100;
+
+	if(vector & 0x3fff){
+		vector |= (1<<14);
+	}
 
 	return (vector >> 14);
 }
@@ -215,12 +223,12 @@ int main(void){
 	x = result >> 16;	
 	y = (int16_t)(result);	
 	
-	if(x & 0x7f){
-		//x |= (1<<7);
+	if(x & 0x3f){
+		x |= (1<<6);
 	}
 
-	if(y & 0x7f){
-		//y |= (1<<7);
+	if(y & 0x3f){
+		y |= (1<<6);
 	}
 	y = y >> 6;
 	x = x >>6;
@@ -247,16 +255,16 @@ int main(void){
 	int16_t n = 10 << 8;
 	int16_t d = 20 << 8;
 
-	n = arctan_fraction(n,n);
+	n = arctan_fraction(n,d);
 
-	printf("Angle = %i\n", n);
+	printf("Arctan_fraction = %i\n", n);
 
 	n = 20;
 
 	n = arctan(n);
 
 
-	printf("Angle = %i\n", n);
+	printf("Arctan = %i\n", n);
 
 	n = cos_cordic(0);
 
