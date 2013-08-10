@@ -64,8 +64,7 @@ int32_t rotation(int32_t vector, int32_t angle){
 		}
 		
 		cur_x = cur_x - ((d*round_y)>>i);
-		cur_y = cur_y + ((d*round_x)>>i);
-		
+		cur_y = cur_y + ((d*round_x)>>i);		
 		int_z = int_z - (d*arctan_degrees[i]);
 		
 		round_x = cur_x;
@@ -95,51 +94,63 @@ Magnitude returned as high two bytes.
 Angle returned as low two bytes. */
 int32_t vectoring(int32_t vector){
 	register int i, d;
-	register int32_t cur_x, cur_y, last_x, last_y, int_z, rounding_mask;	
+	register int32_t cur_x, cur_y, int_z, rounding_mask, round_x, round_y;	
 	
 	rounding_mask = 0;
 	
-	
-	last_x = vector >> 16;
-	vector = vector << 16;
-	last_y = vector >> 16;
+	round_x = vector >> 16;		// x is in top two bytes
+	vector = vector << 16;		// push low bytes to far left so negative will propagate
+	round_y = vector >> 16;		// y is now in top two bytes
 	
 	int_z = 0;
 	
-	for(i = 0; i < ITERATIONS; i++){
+	// First iteration, no division or rounding required
+	d = -1;
+	if(round_y < 0) d = 1;
+	
+	cur_x = round_x - (d*round_y);
+	cur_y = round_y + (d*round_x);
+	int_z = int_z - (d*arctan_degrees[0]);
+	
+	round_x = cur_x;
+	round_y = cur_y;	
+	
+	// Remaining iterations 
+	
+	for(i = 1; i < ITERATIONS; i++){
 		d = -1;
-		if(last_y < 0) d = 1;
+		if(cur_y < 0) d = 1;
 		
-		if(rounding_mask & last_x){
-			//last_x |= (1<<i);
+		// if there are bits high in the soon to be truncated region
+		if(rounding_mask & round_x){
+			round_x |= (1<<i);		// Von Neumann rounding
+		}		
+		if(rounding_mask & round_y){
+			round_y |= (1<<i);		// Von Neumann rounding
 		}
 		
-		if(rounding_mask & last_y){
-			//last_y |= (1<<i);
-		}
-		
-		cur_x = last_x - ((d*last_y)>>i);
-		cur_y = last_y + ((d*last_x)>>i);
+		cur_x = cur_x - ((d*round_y)>>i);
+		cur_y = cur_y + ((d*round_x)>>i);		
 		int_z = int_z - (d*arctan_degrees[i]);
 		
-		last_x = cur_x;
-		last_y = cur_y;	
+		round_x = cur_x;
+		round_y = cur_y;		
 		
-		rounding_mask |= (1<<i);
+		// add another 1 to the rounding mask
+		rounding_mask |= (1<<(i-1));
 	}
+	// ITER_SCALE is multiplied by 2^10 so shifting current values to compensate.
+	cur_x = cur_x << 10;
+	cur_x /= ITER_SCALE;	
 	
-	last_x = last_x << 10;
-	last_x /= ITER_SCALE;
 	
-	last_x = last_x << 16;
+	int_z /= ANGLE_SCALE;		// put angle into degrees
+	int_z &= TWO_BYTE_MASK;		// ensure it's 16 bits (should be anyway)
 	
-	int_z /= ANGLE_SCALE;
+	cur_x = cur_x << 16;	// Magnitude - high two bytes of returned value
+	cur_x |= int_z;			// Angle - low two bytes of the returned value
 	
-	int_z &= TWO_BYTE_MASK;
-	
-	last_x |= int_z;
-	
-	return last_x;
+	return cur_x;
 }
 
 
@@ -166,9 +177,9 @@ int main(void){
 	printf("x = %f\ty = %f\n",final_x,final_y);
 	
 	// test vectoring
-	/*int16_t x, y;
-	int32_t vector, result;
-	float final_x, final_y;
+	//int16_t x, y;
+	//int32_t vector, result;
+	//float final_x, final_y;
 	
 	y = 1<<14;
 	x = 0;
@@ -183,5 +194,5 @@ int main(void){
 	final_x = (float)x / (float)(1<<14);
 	//final_y = (float)y / (float)(1<<14);
 	printf("magnitude = %f\tangle = %i\n",final_x,y);
-	return 0;*/
+	return 0;
 }
