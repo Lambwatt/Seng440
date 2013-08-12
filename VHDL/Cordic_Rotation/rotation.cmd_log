@@ -1,0 +1,93 @@
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+netgen -intstyle ise -ar Structure -tm rotation -w -dir netgen/synthesis -ofmt vhdl -sim rotation.ngc rotation_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+netgen -intstyle ise -ar Structure -tm rotation -w -dir netgen/synthesis -ofmt vhdl -sim rotation.ngc rotation_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+netgen -intstyle ise -ar Structure -tm rotation -w -dir netgen/synthesis -ofmt vhdl -sim rotation.ngc rotation_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 
+xst -intstyle ise -ifn "C:/Courses/Cordic/Cordic_Rotation/rotation.xst" -ofn "C:/Courses/Cordic/Cordic_Rotation/rotation.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 rotation.ngc rotation.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rotation_map.ncd rotation.ngd rotation.pcf 
+par -w -intstyle ise -ol high -mt off rotation_map.ncd rotation.ncd rotation.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml rotation.twx rotation.ncd -o rotation.twr rotation.pcf 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Courses/Cordic/Cordic_Rotation/rotation_TB_isim_beh.exe" -prj "C:/Courses/Cordic/Cordic_Rotation/rotation_TB_beh.prj" "work.rotation_TB" 
