@@ -33,7 +33,7 @@ int32_t const arctan_degrees[ITERATIONS] = {754974720, 445687602, 235489088, 119
 vector: High 16 bits are x.  Low 16 bits are y. Application engineer assumed to scale values themselves.
 angle: assumed to be in range [-90,90] scaled to 32 bit accuracy (2^31)/90 */
 int32_t rotation(int32_t vector, int32_t angle){
-	register int i, arc_tan;
+	register int i, i_next, arc_tan, rounding_term;
 	register int32_t cur_x, cur_y, int_z, rounding_mask, round_x, round_y;
 
 	rounding_mask = 0;
@@ -48,12 +48,13 @@ int32_t rotation(int32_t vector, int32_t angle){
 	round_y = cur_y;
 
 	// First iteration, no division or rounding required
-
+	/*loop prolog*/
 	arc_tan = arctan_degrees[0];
 	if(int_z < 0){
-		arc_tan *= -1;
-		round_x *= -1;
-		round_y *= -1;
+		//replaced explicitly with subtraction to match assembler. Assempler should now further optimize.
+		arc_tan = 0-arc_tan;
+		round_x = 0-round_x;
+		round_y = 0-round_y;
 	}
 
 	cur_x = cur_x - round_y;
@@ -63,34 +64,61 @@ int32_t rotation(int32_t vector, int32_t angle){
 	round_x = cur_x;
 	round_y = cur_y;
 
+	rounding_term = 1;
 	// Remaining iterations
-	for(i = 1; i < ITERATIONS; i++){
-		arc_tan = arctan_degrees[i];
-		if(int_z < 0){
-			arc_tan *= -1;
-			round_x *= -1;
-			round_y *= -1;
-		}
-
-		// if there are bits high in the soon to be truncated region
+	for(i = i-i; i - (ITERATIONS-1); i++){//optimized loop condition
+		
+		// if there are bits high in the soon to be truncated region. Now uses rounding_term	
 		if(rounding_mask & round_x){
-			round_x |= (1<<i);		// Von Neumann rounding
+			round_x |= rounding_term;		// Von Neumann rounding
 		}
 		if(rounding_mask & round_y){
-			round_y |= (1<<i);		// Von Neumann rounding
+			round_y |= rounding_term;		// Von Neumann rounding
 		}
+		// add another 1 to the rounding mask
+		rounding_mask |= rounding_term;
+		rounding_term = 1<<i+1
 
 		cur_x = cur_x - (round_y>>i);
+		round_x = cur_x;//moved to resuse variable immediately
+		
 		cur_y = cur_y + (round_x>>i);
-		int_z = int_z - arc_tan;
-
-		round_x = cur_x;
-		round_y = cur_y;
-
-		// add another 1 to the rounding mask
-		rounding_mask |= (1<<(i-1));
+		round_y = cur_y;//moved to resuse variable immediately
+		
+		int_z = int_z - arc_tan;	
+	
+		i_next = i+1;	
+		arc_tan = arctan_degrees[i_next];
+		if(int_z < 0){
+			//replaced explicitly with subtraction to match assembler. Assempler should now further optimize.
+			arc_tan = 0-arc_tan;
+			round_x = 0-round_x;
+			round_y = 0-round_y;
+		}
+	}
+	//Consider grafting entire loop body here.
+	/*pipeling epilogue*/
+	//i == 8
+	// if there are bits high in the soon to be truncated region. Now uses rounding_term
+	if(rounding_mask & round_x){
+		round_x |= rounding_term;		// Von Neumann rounding
+	}
+	if(rounding_mask & round_y){
+		round_y |= rounding_term;		// Von Neumann rounding
 	}
 
+	cur_x = cur_x - (round_y>>i);
+	//round_x = cur_x;//not necessary since rounding mask will not be used again.
+		
+	cur_y = cur_y + (round_x>>i);
+	//round_y = cur_y;//not necessary since rounding mask will not be used again.
+		
+	//int_z = int_z - arc_tan; not necessary since rounding mask will not be used again.
+		
+	// add another 1 to the rounding mask
+	//rounding_mask |= (1<<(i-1)); not necessary since rounding mask will not be used again.
+
+	//post loop code
 	// ITER_SCALE is multiplied by 2^10 so shifting current values to compensate.
 	cur_x = cur_x << 10;
 	cur_x /= ITER_SCALE;

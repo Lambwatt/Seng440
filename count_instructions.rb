@@ -27,7 +27,7 @@ def merge_counts(count1, count2)
 	return hash
 end
 
-def count(section, f_name, l_branches)
+def count(section, f_name, l_branches, iter)
 	instructions = {};
 	loop_instructions = {};
 	in_func = false
@@ -54,7 +54,7 @@ def count(section, f_name, l_branches)
 	}
 
 	loop_instructions.each_key{|k|
-		loop_instructions[k] *= 8	
+		loop_instructions[k] *= iter.to_i
 	}
 
 	count = merge_counts(instructions, loop_instructions)
@@ -66,6 +66,7 @@ end
 file_name = ARGV[0]
 function_name = ARGV[1]
 l_branches = ARGV[2]
+iter = ARGV[3]
 read_file(file_name){|f|
-		count(f.read, function_name, l_branches)
+		count(f.read, function_name, l_branches, iter)
 }
