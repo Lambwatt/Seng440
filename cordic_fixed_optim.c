@@ -77,7 +77,7 @@ int32_t rotation(int32_t vector, int32_t angle){
 		}
 		// add another 1 to the rounding mask
 		rounding_mask |= rounding_term;
-		rounding_term = 1<<i+1
+		rounding_term = 1<<i+1;
 
 		cur_x = cur_x - (round_y>>i);
 		round_x = cur_x;//moved to resuse variable immediately
