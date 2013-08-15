@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "C:/Users/Gord/Documents/GitHub/Seng440/VHDL/Cordic/Cordic.xst" -ofn "C:/Users/Gord/Documents/GitHub/Seng440/VHDL/Cordic/Cordic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 Cordic.ngc Cordic.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Cordic_map.ncd Cordic.ngd Cordic.pcf 
+par -w -intstyle ise -ol high -mt off Cordic_map.ncd Cordic.ncd Cordic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Cordic.twx Cordic.ncd -o Cordic.twr Cordic.pcf 
+xst -intstyle ise -ifn "C:/Users/Gord/Documents/GitHub/Seng440/VHDL/Cordic/Cordic.xst" -ofn "C:/Users/Gord/Documents/GitHub/Seng440/VHDL/Cordic/Cordic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 Cordic.ngc Cordic.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Cordic_map.ncd Cordic.ngd Cordic.pcf 
+par -w -intstyle ise -ol high -mt off Cordic_map.ncd Cordic.ncd Cordic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Cordic.twx Cordic.ncd -o Cordic.twr Cordic.pcf 
+xst -intstyle ise -ifn "C:/Users/Gord/Documents/GitHub/Seng440/VHDL/Cordic/Cordic.xst" -ofn "C:/Users/Gord/Documents/GitHub/Seng440/VHDL/Cordic/Cordic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg484-3 Cordic.ngc Cordic.ngd  
+map -intstyle ise -p xc6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Cordic_map.ncd Cordic.ngd Cordic.pcf 
+par -w -intstyle ise -ol high -mt off Cordic_map.ncd Cordic.ncd Cordic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Cordic.twx Cordic.ncd -o Cordic.twr Cordic.pcf 

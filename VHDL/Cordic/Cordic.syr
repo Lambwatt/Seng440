@@ -1,0 +1,1413 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: Cordic.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Cordic.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Cordic"
+Output Format                      : NGC
+Target Device                      : xc6slx75-3-fgg484
+
+---- Source Options
+Top Module Name                    : Cordic
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Gord\Documents\GitHub\Seng440\VHDL\Cordic\Cordic.vhd" into library work
+Parsing entity <Cordic>.
+Parsing architecture <Behavioral> of entity <cordic>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Cordic> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Cordic>.
+    Related source file is "C:\Users\Gord\Documents\GitHub\Seng440\VHDL\Cordic\Cordic.vhd".
+WARNING:Xst:647 - Input <rot_angle<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 65-bit subtractor for signal <n0428> created at line 68.
+    Found 65-bit subtractor for signal <n0429> created at line 69.
+    Found 33-bit subtractor for signal <n0435> created at line 74.
+    Found 65-bit subtractor for signal <n0436> created at line 85.
+    Found 65-bit subtractor for signal <n0437> created at line 86.
+    Found 33-bit subtractor for signal <n0443> created at line 100.
+    Found 65-bit subtractor for signal <n0444> created at line 85.
+    Found 65-bit subtractor for signal <n0445> created at line 86.
+    Found 33-bit subtractor for signal <n0451> created at line 100.
+    Found 65-bit subtractor for signal <n0452> created at line 85.
+    Found 65-bit subtractor for signal <n0453> created at line 86.
+    Found 33-bit subtractor for signal <n0459> created at line 100.
+    Found 65-bit subtractor for signal <n0460> created at line 85.
+    Found 65-bit subtractor for signal <n0461> created at line 86.
+    Found 33-bit subtractor for signal <n0467> created at line 100.
+    Found 65-bit subtractor for signal <n0468> created at line 85.
+    Found 65-bit subtractor for signal <n0469> created at line 86.
+    Found 33-bit subtractor for signal <n0475> created at line 100.
+    Found 65-bit subtractor for signal <n0476> created at line 85.
+    Found 65-bit subtractor for signal <n0477> created at line 86.
+    Found 33-bit subtractor for signal <n0483> created at line 100.
+    Found 65-bit subtractor for signal <n0484> created at line 85.
+    Found 65-bit subtractor for signal <n0485> created at line 86.
+    Found 33-bit subtractor for signal <n0491> created at line 100.
+    Found 65-bit subtractor for signal <n0492> created at line 85.
+    Found 65-bit subtractor for signal <n0493> created at line 86.
+    Found 33-bit subtractor for signal <n0499> created at line 100.
+    Found 65-bit subtractor for signal <n0500> created at line 85.
+    Found 65-bit subtractor for signal <n0501> created at line 86.
+    Found 33-bit subtractor for signal <n0507> created at line 100.
+    Found 65-bit subtractor for signal <n0508> created at line 85.
+    Found 65-bit subtractor for signal <n0509> created at line 86.
+    Found 33-bit subtractor for signal <n0515> created at line 100.
+    Found 65-bit subtractor for signal <n0516> created at line 85.
+    Found 65-bit subtractor for signal <n0517> created at line 86.
+    Found 33-bit subtractor for signal <n0523> created at line 100.
+    Found 65-bit subtractor for signal <n0524> created at line 85.
+    Found 65-bit subtractor for signal <n0525> created at line 86.
+    Found 33-bit subtractor for signal <n0531> created at line 100.
+    Found 65-bit subtractor for signal <n0532> created at line 85.
+    Found 65-bit subtractor for signal <n0533> created at line 86.
+    Found 33-bit subtractor for signal <n0539> created at line 100.
+    Found 65-bit subtractor for signal <n0540> created at line 85.
+    Found 65-bit subtractor for signal <n0541> created at line 86.
+    Found 33-bit subtractor for signal <n0547> created at line 100.
+    Found 65-bit subtractor for signal <n0548> created at line 85.
+    Found 65-bit subtractor for signal <n0549> created at line 86.
+    Found 65-bit subtractor for signal <n0556> created at line 137.
+    Found 65-bit subtractor for signal <n0557> created at line 138.
+    Found 65-bit subtractor for signal <n0564> created at line 154.
+    Found 65-bit subtractor for signal <n0565> created at line 155.
+    Found 65-bit subtractor for signal <n0572> created at line 154.
+    Found 65-bit subtractor for signal <n0573> created at line 155.
+    Found 65-bit subtractor for signal <n0580> created at line 154.
+    Found 65-bit subtractor for signal <n0581> created at line 155.
+    Found 65-bit subtractor for signal <n0588> created at line 154.
+    Found 65-bit subtractor for signal <n0589> created at line 155.
+    Found 65-bit subtractor for signal <n0596> created at line 154.
+    Found 65-bit subtractor for signal <n0597> created at line 155.
+    Found 65-bit subtractor for signal <n0604> created at line 154.
+    Found 65-bit subtractor for signal <n0605> created at line 155.
+    Found 65-bit subtractor for signal <n0612> created at line 154.
+    Found 65-bit subtractor for signal <n0613> created at line 155.
+    Found 65-bit subtractor for signal <n0620> created at line 154.
+    Found 65-bit subtractor for signal <n0621> created at line 155.
+    Found 65-bit subtractor for signal <n0628> created at line 154.
+    Found 65-bit subtractor for signal <n0629> created at line 155.
+    Found 65-bit subtractor for signal <n0636> created at line 154.
+    Found 65-bit subtractor for signal <n0637> created at line 155.
+    Found 65-bit subtractor for signal <n0644> created at line 154.
+    Found 65-bit subtractor for signal <n0645> created at line 155.
+    Found 65-bit subtractor for signal <n0652> created at line 154.
+    Found 65-bit subtractor for signal <n0653> created at line 155.
+    Found 65-bit subtractor for signal <n0660> created at line 154.
+    Found 65-bit subtractor for signal <n0661> created at line 155.
+    Found 65-bit subtractor for signal <n0668> created at line 154.
+    Found 65-bit subtractor for signal <n0669> created at line 155.
+    Found 65-bit subtractor for signal <n0676> created at line 154.
+    Found 33-bit subtractor for signal <n0552> created at line 169.
+    Found 32-bit adder for signal <n1157> created at line 73.
+    Found 32-bit adder for signal <n1160> created at line 99.
+    Found 32-bit adder for signal <n1163> created at line 99.
+    Found 32-bit adder for signal <n1166> created at line 99.
+    Found 32-bit adder for signal <n1169> created at line 99.
+    Found 32-bit adder for signal <n1172> created at line 99.
+    Found 32-bit adder for signal <n1175> created at line 99.
+    Found 32-bit adder for signal <n1178> created at line 99.
+    Found 32-bit adder for signal <n1181> created at line 99.
+    Found 32-bit adder for signal <n1184> created at line 99.
+    Found 32-bit adder for signal <n1187> created at line 99.
+    Found 32-bit adder for signal <n1190> created at line 99.
+    Found 32-bit adder for signal <n1193> created at line 99.
+    Found 32-bit adder for signal <n1196> created at line 99.
+    Found 32-bit adder for signal <n1199> created at line 99.
+    Found 32-bit adder for signal <Rotation.round_y> created at line 99.
+    Found 32-bit adder for signal <n1205> created at line 142.
+    Found 32-bit adder for signal <n1208> created at line 168.
+    Found 32-bit adder for signal <n1211> created at line 168.
+    Found 32-bit adder for signal <n1214> created at line 168.
+    Found 32-bit adder for signal <n1217> created at line 168.
+    Found 32-bit adder for signal <n1220> created at line 168.
+    Found 32-bit adder for signal <n1223> created at line 168.
+    Found 32-bit adder for signal <n1226> created at line 168.
+    Found 32-bit adder for signal <n1229> created at line 168.
+    Found 32-bit adder for signal <n1232> created at line 168.
+    Found 32-bit adder for signal <n1235> created at line 168.
+    Found 32-bit adder for signal <n1238> created at line 168.
+    Found 32-bit adder for signal <n1241> created at line 168.
+    Found 32-bit adder for signal <n1244> created at line 168.
+    Found 32-bit adder for signal <vectoring_vector[15]_vectoring_vector[31]_add_338_OUT> created at line 168.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_7_OUT<31:0>> created at line 72.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_18_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_29_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_40_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_51_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_62_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_73_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_84_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_95_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_106_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_117_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_128_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_139_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_150_OUT<31:0>> created at line 98.
+    Found 32-bit subtractor for signal <rot_vector[31]_rot_vector[15]_sub_161_OUT<31:0>> created at line 98.
+    Found 22-bit subtractor for signal <Rotation.round_x<21:0>> created at line 53.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_184_OUT<31:0>> created at line 141.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_195_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_206_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_217_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_228_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_239_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_250_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_261_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_272_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_283_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_294_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_305_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_316_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_327_OUT<31:0>> created at line 167.
+    Found 32-bit subtractor for signal <vectoring_vector[31]_vectoring_vector[15]_sub_338_OUT<31:0>> created at line 167.
+    Found 22-bit subtractor for signal <Vectoring.round_x<21:0>> created at line 122.
+    Found 32-bit adder for signal <_n1330> created at line 169.
+    Found 32-bit adder for signal <_n1331> created at line 169.
+    Found 32-bit adder for signal <_n1332> created at line 169.
+    Found 32-bit adder for signal <_n1333> created at line 169.
+    Found 32-bit adder for signal <_n1334> created at line 169.
+    Found 32-bit adder for signal <_n1335> created at line 169.
+    Found 32-bit adder for signal <_n1336> created at line 169.
+    Found 32-bit adder for signal <_n1337> created at line 169.
+    Found 32-bit adder for signal <_n1338> created at line 169.
+    Found 32-bit adder for signal <_n1339> created at line 169.
+    Found 32-bit adder for signal <_n1340> created at line 169.
+    Found 32-bit adder for signal <_n1341> created at line 169.
+    Found 32-bit adder for signal <_n1342> created at line 169.
+    Found 32-bit adder for signal <_n1343> created at line 169.
+    Found 32-bit subtractor for signal <GND_4_o_GND_4_o_sub_340_OUT<31:0>> created at line 169.
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_1_o> created at line 66
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_10_o> created at line 83
+    Found 2-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_16_o> created at line 90
+    Found 2-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_17_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_21_o> created at line 83
+    Found 2-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_27_o> created at line 90
+    Found 2-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_28_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_32_o> created at line 83
+    Found 3-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_38_o> created at line 90
+    Found 3-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_39_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_43_o> created at line 83
+    Found 4-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_49_o> created at line 90
+    Found 4-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_50_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_54_o> created at line 83
+    Found 5-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_60_o> created at line 90
+    Found 5-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_61_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_65_o> created at line 83
+    Found 6-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_71_o> created at line 90
+    Found 6-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_72_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_76_o> created at line 83
+    Found 7-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_82_o> created at line 90
+    Found 7-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_83_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_87_o> created at line 83
+    Found 8-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_93_o> created at line 90
+    Found 8-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_94_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_98_o> created at line 83
+    Found 9-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_104_o> created at line 90
+    Found 9-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_105_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_109_o> created at line 83
+    Found 10-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_115_o> created at line 90
+    Found 10-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_116_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_120_o> created at line 83
+    Found 11-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_126_o> created at line 90
+    Found 11-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_127_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_131_o> created at line 83
+    Found 12-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_137_o> created at line 90
+    Found 12-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_138_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_142_o> created at line 83
+    Found 13-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_148_o> created at line 90
+    Found 13-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_149_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_153_o> created at line 83
+    Found 14-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_159_o> created at line 90
+    Found 14-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_160_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_4_o_rot_angle[7]_LessThan_164_o> created at line 83
+    Found 15-bit comparator greater for signal <rot_vector[31]_GND_4_o_LessThan_170_o> created at line 90
+    Found 15-bit comparator greater for signal <rot_vector[15]_GND_4_o_LessThan_171_o> created at line 93
+    Found 32-bit comparator lessequal for signal <n0203> created at line 135
+    Found 32-bit comparator lessequal for signal <n0213> created at line 152
+    Found 2-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_193_o> created at line 159
+    Found 2-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_194_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0227> created at line 152
+    Found 2-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_204_o> created at line 159
+    Found 2-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_205_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0241> created at line 152
+    Found 3-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_215_o> created at line 159
+    Found 3-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_216_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0255> created at line 152
+    Found 4-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_226_o> created at line 159
+    Found 4-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_227_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0269> created at line 152
+    Found 5-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_237_o> created at line 159
+    Found 5-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_238_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0283> created at line 152
+    Found 6-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_248_o> created at line 159
+    Found 6-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_249_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0297> created at line 152
+    Found 7-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_259_o> created at line 159
+    Found 7-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_260_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0311> created at line 152
+    Found 8-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_270_o> created at line 159
+    Found 8-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_271_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0325> created at line 152
+    Found 9-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_281_o> created at line 159
+    Found 9-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_282_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0339> created at line 152
+    Found 10-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_292_o> created at line 159
+    Found 10-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_293_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0353> created at line 152
+    Found 11-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_303_o> created at line 159
+    Found 11-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_304_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0367> created at line 152
+    Found 12-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_314_o> created at line 159
+    Found 12-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_315_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0381> created at line 152
+    Found 13-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_325_o> created at line 159
+    Found 13-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_326_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0395> created at line 152
+    Found 14-bit comparator greater for signal <vectoring_vector[31]_GND_4_o_LessThan_336_o> created at line 159
+    Found 14-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_337_o> created at line 162
+    Found 32-bit comparator lessequal for signal <n0409> created at line 152
+    Found 15-bit comparator greater for signal <vectoring_vector[15]_GND_4_o_LessThan_348_o> created at line 162
+    Summary:
+	inferred 157 Adder/Subtractor(s).
+	inferred  91 Comparator(s).
+	inferred 122 Multiplexer(s).
+Unit <Cordic> synthesized.
+
+Synthesizing Unit <div_32s_12s>.
+    Related source file is "".
+    Found 32-bit subtractor for signal <a[31]_unary_minus_1_OUT> created at line 0.
+    Found 12-bit subtractor for signal <b[11]_unary_minus_3_OUT> created at line 0.
+    Found 44-bit adder for signal <n2615> created at line 0.
+    Found 44-bit adder for signal <GND_6_o_b[11]_add_5_OUT> created at line 0.
+    Found 43-bit adder for signal <n2619> created at line 0.
+    Found 43-bit adder for signal <GND_6_o_b[11]_add_7_OUT> created at line 0.
+    Found 42-bit adder for signal <n2623> created at line 0.
+    Found 42-bit adder for signal <GND_6_o_b[11]_add_9_OUT> created at line 0.
+    Found 41-bit adder for signal <n2627> created at line 0.
+    Found 41-bit adder for signal <GND_6_o_b[11]_add_11_OUT> created at line 0.
+    Found 40-bit adder for signal <n2631> created at line 0.
+    Found 40-bit adder for signal <GND_6_o_b[11]_add_13_OUT> created at line 0.
+    Found 39-bit adder for signal <n2635> created at line 0.
+    Found 39-bit adder for signal <GND_6_o_b[11]_add_15_OUT> created at line 0.
+    Found 38-bit adder for signal <n2639> created at line 0.
+    Found 38-bit adder for signal <GND_6_o_b[11]_add_17_OUT> created at line 0.
+    Found 37-bit adder for signal <n2643> created at line 0.
+    Found 37-bit adder for signal <GND_6_o_b[11]_add_19_OUT> created at line 0.
+    Found 36-bit adder for signal <n2647> created at line 0.
+    Found 36-bit adder for signal <GND_6_o_b[11]_add_21_OUT> created at line 0.
+    Found 35-bit adder for signal <n2651> created at line 0.
+    Found 35-bit adder for signal <GND_6_o_b[11]_add_23_OUT> created at line 0.
+    Found 34-bit adder for signal <n2655> created at line 0.
+    Found 34-bit adder for signal <GND_6_o_b[11]_add_25_OUT> created at line 0.
+    Found 33-bit adder for signal <n2659> created at line 0.
+    Found 33-bit adder for signal <GND_6_o_b[11]_add_27_OUT> created at line 0.
+    Found 32-bit adder for signal <n2663> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[11]_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <n2667> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <n2671> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <n2675> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <n2679> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <n2683> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <n2687> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <n2691> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <n2695> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <n2699> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <n2703> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <n2707> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <n2711> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <n2715> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <n2719> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <n2723> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_59_OUT> created at line 0.
+    Found 32-bit adder for signal <n2727> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_61_OUT> created at line 0.
+    Found 32-bit adder for signal <n2731> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_63_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <n2735> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_65_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <n2739> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_6_o_add_67_OUT[31:0]> created at line 0.
+    Found 33-bit adder for signal <GND_6_o_BUS_0001_add_70_OUT[32:0]> created at line 0.
+    Found 44-bit comparator greater for signal <BUS_0001_INV_1342_o> created at line 0
+    Found 43-bit comparator greater for signal <BUS_0002_INV_1341_o> created at line 0
+    Found 42-bit comparator greater for signal <BUS_0003_INV_1340_o> created at line 0
+    Found 41-bit comparator greater for signal <BUS_0004_INV_1339_o> created at line 0
+    Found 40-bit comparator greater for signal <BUS_0005_INV_1338_o> created at line 0
+    Found 39-bit comparator greater for signal <BUS_0006_INV_1337_o> created at line 0
+    Found 38-bit comparator greater for signal <BUS_0007_INV_1336_o> created at line 0
+    Found 37-bit comparator greater for signal <BUS_0008_INV_1335_o> created at line 0
+    Found 36-bit comparator greater for signal <BUS_0009_INV_1334_o> created at line 0
+    Found 35-bit comparator greater for signal <BUS_0010_INV_1333_o> created at line 0
+    Found 34-bit comparator greater for signal <BUS_0011_INV_1332_o> created at line 0
+    Found 33-bit comparator greater for signal <BUS_0012_INV_1331_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0013_INV_1330_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0014_INV_1329_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0015_INV_1328_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0016_INV_1327_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0017_INV_1326_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0018_INV_1325_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0019_INV_1324_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0020_INV_1323_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0021_INV_1322_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0022_INV_1321_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0023_INV_1320_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0024_INV_1319_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0025_INV_1318_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0026_INV_1317_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0027_INV_1316_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0028_INV_1315_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0029_INV_1314_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0030_INV_1313_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0031_INV_1312_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0032_INV_1311_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0033_INV_1310_o> created at line 0
+    Summary:
+	inferred  67 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 934 Multiplexer(s).
+Unit <div_32s_12s> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 358
+ 12-bit subtractor                                     : 3
+ 22-bit subtractor                                     : 2
+ 32-bit adder                                          : 165
+ 32-bit subtractor                                     : 34
+ 33-bit adder                                          : 9
+ 33-bit subtractor                                     : 16
+ 34-bit adder                                          : 6
+ 35-bit adder                                          : 6
+ 36-bit adder                                          : 6
+ 37-bit adder                                          : 6
+ 38-bit adder                                          : 6
+ 39-bit adder                                          : 6
+ 40-bit adder                                          : 6
+ 41-bit adder                                          : 6
+ 42-bit adder                                          : 6
+ 43-bit adder                                          : 6
+ 44-bit adder                                          : 6
+ 65-bit subtractor                                     : 63
+# Comparators                                          : 190
+ 10-bit comparator greater                             : 4
+ 11-bit comparator greater                             : 4
+ 12-bit comparator greater                             : 4
+ 13-bit comparator greater                             : 4
+ 14-bit comparator greater                             : 4
+ 15-bit comparator greater                             : 3
+ 2-bit comparator greater                              : 8
+ 3-bit comparator greater                              : 4
+ 32-bit comparator greater                             : 79
+ 32-bit comparator lessequal                           : 16
+ 33-bit comparator greater                             : 3
+ 34-bit comparator greater                             : 3
+ 35-bit comparator greater                             : 3
+ 36-bit comparator greater                             : 3
+ 37-bit comparator greater                             : 3
+ 38-bit comparator greater                             : 3
+ 39-bit comparator greater                             : 3
+ 4-bit comparator greater                              : 4
+ 40-bit comparator greater                             : 3
+ 41-bit comparator greater                             : 3
+ 42-bit comparator greater                             : 3
+ 43-bit comparator greater                             : 3
+ 44-bit comparator greater                             : 3
+ 5-bit comparator greater                              : 4
+ 6-bit comparator greater                              : 4
+ 7-bit comparator greater                              : 4
+ 8-bit comparator greater                              : 4
+ 9-bit comparator greater                              : 4
+# Multiplexers                                         : 2924
+ 1-bit 2-to-1 multiplexer                              : 2843
+ 12-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 75
+ 33-bit 2-to-1 multiplexer                             : 3
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Cordic>.
+	The following adders/subtractors are grouped into adder tree <Msub_GND_4_o_GND_4_o_sub_340_OUT<31:0>1> :
+ 	<Madd__n1331> in block <Cordic>, 	<Madd__n1330> in block <Cordic>, 	<Madd__n1332> in block <Cordic>, 	<Madd__n1333> in block <Cordic>, 	<Madd__n1336> in block <Cordic>, 	<Madd__n1337> in block <Cordic>, 	<Madd__n1339> in block <Cordic>, 	<Madd__n1340> in block <Cordic>.
+	The following adders/subtractors are grouped into adder tree <Madd__n13431> :
+ 	<Madd__n1335> in block <Cordic>, 	<Madd__n1334> in block <Cordic>, 	<Madd__n1338> in block <Cordic>, 	<Madd__n1341> in block <Cordic>.
+Unit <Cordic> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 247
+ 12-bit subtractor                                     : 3
+ 22-bit adder                                          : 1
+ 22-bit subtractor                                     : 3
+ 32-bit adder                                          : 30
+ 32-bit adder carry in                                 : 96
+ 32-bit subtractor                                     : 48
+ 33-bit adder                                          : 3
+ 64-bit subtractor                                     : 63
+# Adder Trees                                          : 1
+ 32-bit / 15-inputs adder tree                         : 1
+# Comparators                                          : 190
+ 10-bit comparator greater                             : 4
+ 11-bit comparator greater                             : 4
+ 12-bit comparator greater                             : 4
+ 13-bit comparator greater                             : 4
+ 14-bit comparator greater                             : 4
+ 15-bit comparator greater                             : 3
+ 2-bit comparator greater                              : 8
+ 3-bit comparator greater                              : 4
+ 32-bit comparator greater                             : 79
+ 32-bit comparator lessequal                           : 16
+ 33-bit comparator greater                             : 3
+ 34-bit comparator greater                             : 3
+ 35-bit comparator greater                             : 3
+ 36-bit comparator greater                             : 3
+ 37-bit comparator greater                             : 3
+ 38-bit comparator greater                             : 3
+ 39-bit comparator greater                             : 3
+ 4-bit comparator greater                              : 4
+ 40-bit comparator greater                             : 3
+ 41-bit comparator greater                             : 3
+ 42-bit comparator greater                             : 3
+ 43-bit comparator greater                             : 3
+ 44-bit comparator greater                             : 3
+ 5-bit comparator greater                              : 4
+ 6-bit comparator greater                              : 4
+ 7-bit comparator greater                              : 4
+ 8-bit comparator greater                              : 4
+ 9-bit comparator greater                              : 4
+# Multiplexers                                         : 2924
+ 1-bit 2-to-1 multiplexer                              : 2843
+ 12-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 75
+ 33-bit 2-to-1 multiplexer                             : 3
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Cordic> ...
+
+Optimizing unit <div_32s_12s> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Cordic, actual ratio is 25.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Cordic.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 20772
+#      GND                         : 1
+#      INV                         : 2171
+#      LUT1                        : 28
+#      LUT2                        : 537
+#      LUT3                        : 1530
+#      LUT4                        : 2391
+#      LUT5                        : 1643
+#      LUT6                        : 357
+#      MUXCY                       : 6273
+#      MUXF7                       : 6
+#      VCC                         : 1
+#      XORCY                       : 5834
+# IO Buffers                       : 136
+#      IBUF                        : 72
+#      OBUF                        : 64
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx75fgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                 8657  out of  46648    18%  
+    Number used as Logic:              8657  out of  46648    18%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   8657
+   Number with an unused Flip Flop:    8657  out of   8657   100%  
+   Number with an unused LUT:             0  out of   8657     0%  
+   Number of fully used LUT-FF pairs:     0  out of   8657     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                         160
+ Number of bonded IOBs:                 136  out of    280    48%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 172.318ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2589491991898122000000000000000000000000000000000000000000000000000000000000000 / 64
+-------------------------------------------------------------------------
+Delay:               172.318ns (Levels of Logic = 648)
+  Source:            vectoring_vector<31> (PAD)
+  Destination:       vectorin_result<31> (PAD)
+
+  Data Path: vectoring_vector<31> to vectorin_result<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   1.222   1.348  vectoring_vector_31_IBUF (vectoring_vector_31_IBUF)
+     INV:I->O              1   0.206   0.000  Msub_n0557_Madd_lut<15>1_INV_0 (Msub_n0557_Madd_lut<15>1)
+     MUXCY:S->O            0   0.172   0.000  Msub_n0557_Madd_cy<15> (Msub_n0557_Madd_cy<15>)
+     XORCY:CI->O          16   0.180   1.109  Msub_n0557_Madd_xor<16> (n0557<16>)
+     LUT3:I1->O            1   0.203   0.000  Madd_n1205_lut<16>1 (Madd_n1205_lut<16>1)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1205_cy<16> (Madd_n1205_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<17> (Madd_n1205_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<18> (Madd_n1205_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<19> (Madd_n1205_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<20> (Madd_n1205_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<21> (Madd_n1205_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<22> (Madd_n1205_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<23> (Madd_n1205_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<24> (Madd_n1205_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<25> (Madd_n1205_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<26> (Madd_n1205_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<27> (Madd_n1205_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<28> (Madd_n1205_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1205_cy<29> (Madd_n1205_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1205_cy<30> (Madd_n1205_cy<30>)
+     XORCY:CI->O          93   0.180   2.060  Madd_n1205_xor<31> (n1205<31>)
+     LUT4:I1->O            1   0.205   0.000  Madd_n1208_lut<0> (Madd_n1208_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1208_cy<0> (Madd_n1208_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<1> (Madd_n1208_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<2> (Madd_n1208_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<3> (Madd_n1208_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<4> (Madd_n1208_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<5> (Madd_n1208_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<6> (Madd_n1208_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<7> (Madd_n1208_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<8> (Madd_n1208_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<9> (Madd_n1208_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<10> (Madd_n1208_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<11> (Madd_n1208_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<12> (Madd_n1208_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<13> (Madd_n1208_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<14> (Madd_n1208_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<15> (Madd_n1208_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<16> (Madd_n1208_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<17> (Madd_n1208_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<18> (Madd_n1208_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<19> (Madd_n1208_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<20> (Madd_n1208_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<21> (Madd_n1208_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<22> (Madd_n1208_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<23> (Madd_n1208_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<24> (Madd_n1208_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<25> (Madd_n1208_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<26> (Madd_n1208_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<27> (Madd_n1208_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<28> (Madd_n1208_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1208_cy<29> (Madd_n1208_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1208_cy<30> (Madd_n1208_cy<30>)
+     XORCY:CI->O          85   0.180   2.143  Madd_n1208_xor<31> (n1208<31>)
+     LUT6:I0->O            1   0.203   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1857_o1 (vectoring_vector[31]_PWR_4_o_MUX_1857_o)
+     LUT2:I1->O            1   0.205   0.000  Madd_n1211_lut<0> (Madd_n1211_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1211_cy<0> (Madd_n1211_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<1> (Madd_n1211_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<2> (Madd_n1211_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<3> (Madd_n1211_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<4> (Madd_n1211_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<5> (Madd_n1211_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<6> (Madd_n1211_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<7> (Madd_n1211_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<8> (Madd_n1211_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<9> (Madd_n1211_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<10> (Madd_n1211_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<11> (Madd_n1211_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<12> (Madd_n1211_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<13> (Madd_n1211_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<14> (Madd_n1211_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<15> (Madd_n1211_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<16> (Madd_n1211_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<17> (Madd_n1211_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<18> (Madd_n1211_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<19> (Madd_n1211_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<20> (Madd_n1211_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<21> (Madd_n1211_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<22> (Madd_n1211_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<23> (Madd_n1211_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<24> (Madd_n1211_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<25> (Madd_n1211_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<26> (Madd_n1211_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<27> (Madd_n1211_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<28> (Madd_n1211_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1211_cy<29> (Madd_n1211_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1211_cy<30> (Madd_n1211_cy<30>)
+     XORCY:CI->O          81   0.180   2.116  Madd_n1211_xor<31> (n1211<31>)
+     LUT6:I0->O            1   0.203   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1859_o1 (vectoring_vector[31]_PWR_4_o_MUX_1859_o)
+     LUT2:I1->O            1   0.205   0.000  Madd_n1214_lut<0> (Madd_n1214_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1214_cy<0> (Madd_n1214_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<1> (Madd_n1214_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<2> (Madd_n1214_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<3> (Madd_n1214_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<4> (Madd_n1214_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<5> (Madd_n1214_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<6> (Madd_n1214_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<7> (Madd_n1214_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<8> (Madd_n1214_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<9> (Madd_n1214_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<10> (Madd_n1214_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<11> (Madd_n1214_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<12> (Madd_n1214_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<13> (Madd_n1214_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<14> (Madd_n1214_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<15> (Madd_n1214_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<16> (Madd_n1214_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<17> (Madd_n1214_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<18> (Madd_n1214_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<19> (Madd_n1214_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<20> (Madd_n1214_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<21> (Madd_n1214_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<22> (Madd_n1214_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<23> (Madd_n1214_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<24> (Madd_n1214_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<25> (Madd_n1214_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<26> (Madd_n1214_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<27> (Madd_n1214_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<28> (Madd_n1214_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1214_cy<29> (Madd_n1214_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1214_cy<30> (Madd_n1214_cy<30>)
+     XORCY:CI->O          92   0.180   2.189  Madd_n1214_xor<31> (n1214<31>)
+     LUT6:I0->O            1   0.203   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1861_o11 (Mmux_vectoring_vector[31]_PWR_4_o_MUX_1861_o1)
+     LUT6:I5->O            1   0.205   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1861_o13 (vectoring_vector[31]_PWR_4_o_MUX_1861_o)
+     LUT2:I1->O            1   0.205   0.000  Madd_n1217_lut<0> (Madd_n1217_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1217_cy<0> (Madd_n1217_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<1> (Madd_n1217_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<2> (Madd_n1217_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<3> (Madd_n1217_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<4> (Madd_n1217_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<5> (Madd_n1217_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<6> (Madd_n1217_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<7> (Madd_n1217_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<8> (Madd_n1217_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<9> (Madd_n1217_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<10> (Madd_n1217_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<11> (Madd_n1217_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<12> (Madd_n1217_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<13> (Madd_n1217_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<14> (Madd_n1217_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<15> (Madd_n1217_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<16> (Madd_n1217_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<17> (Madd_n1217_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<18> (Madd_n1217_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<19> (Madd_n1217_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<20> (Madd_n1217_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<21> (Madd_n1217_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<22> (Madd_n1217_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<23> (Madd_n1217_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<24> (Madd_n1217_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<25> (Madd_n1217_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<26> (Madd_n1217_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<27> (Madd_n1217_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<28> (Madd_n1217_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1217_cy<29> (Madd_n1217_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1217_cy<30> (Madd_n1217_cy<30>)
+     XORCY:CI->O          86   0.180   2.149  Madd_n1217_xor<31> (n1217<31>)
+     LUT6:I0->O            1   0.203   0.924  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1863_o12 (Mmux_vectoring_vector[31]_PWR_4_o_MUX_1863_o11)
+     LUT6:I1->O            1   0.203   0.000  Madd_n1220_lut<0> (Madd_n1220_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1220_cy<0> (Madd_n1220_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<1> (Madd_n1220_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<2> (Madd_n1220_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<3> (Madd_n1220_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<4> (Madd_n1220_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<5> (Madd_n1220_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<6> (Madd_n1220_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<7> (Madd_n1220_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<8> (Madd_n1220_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<9> (Madd_n1220_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<10> (Madd_n1220_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<11> (Madd_n1220_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<12> (Madd_n1220_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<13> (Madd_n1220_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<14> (Madd_n1220_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<15> (Madd_n1220_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<16> (Madd_n1220_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<17> (Madd_n1220_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<18> (Madd_n1220_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<19> (Madd_n1220_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<20> (Madd_n1220_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<21> (Madd_n1220_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<22> (Madd_n1220_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<23> (Madd_n1220_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<24> (Madd_n1220_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<25> (Madd_n1220_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<26> (Madd_n1220_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<27> (Madd_n1220_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<28> (Madd_n1220_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1220_cy<29> (Madd_n1220_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1220_cy<30> (Madd_n1220_cy<30>)
+     XORCY:CI->O          86   0.180   2.149  Madd_n1220_xor<31> (n1220<31>)
+     LUT6:I0->O            1   0.203   0.924  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1865_o13 (Mmux_vectoring_vector[31]_PWR_4_o_MUX_1865_o12)
+     LUT6:I1->O            1   0.203   0.000  Madd_n1223_lut<0> (Madd_n1223_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1223_cy<0> (Madd_n1223_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<1> (Madd_n1223_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<2> (Madd_n1223_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<3> (Madd_n1223_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<4> (Madd_n1223_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<5> (Madd_n1223_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<6> (Madd_n1223_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<7> (Madd_n1223_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<8> (Madd_n1223_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<9> (Madd_n1223_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<10> (Madd_n1223_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<11> (Madd_n1223_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<12> (Madd_n1223_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<13> (Madd_n1223_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<14> (Madd_n1223_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<15> (Madd_n1223_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<16> (Madd_n1223_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<17> (Madd_n1223_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<18> (Madd_n1223_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<19> (Madd_n1223_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<20> (Madd_n1223_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<21> (Madd_n1223_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<22> (Madd_n1223_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<23> (Madd_n1223_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<24> (Madd_n1223_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<25> (Madd_n1223_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<26> (Madd_n1223_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<27> (Madd_n1223_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<28> (Madd_n1223_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1223_cy<29> (Madd_n1223_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1223_cy<30> (Madd_n1223_cy<30>)
+     XORCY:CI->O          91   0.180   2.182  Madd_n1223_xor<31> (n1223<31>)
+     LUT6:I0->O            1   0.203   0.924  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1867_o12 (Mmux_vectoring_vector[31]_PWR_4_o_MUX_1867_o11)
+     LUT6:I1->O            1   0.203   0.000  Madd_n1226_lut<0> (Madd_n1226_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1226_cy<0> (Madd_n1226_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<1> (Madd_n1226_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<2> (Madd_n1226_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<3> (Madd_n1226_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<4> (Madd_n1226_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<5> (Madd_n1226_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<6> (Madd_n1226_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<7> (Madd_n1226_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<8> (Madd_n1226_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<9> (Madd_n1226_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<10> (Madd_n1226_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<11> (Madd_n1226_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<12> (Madd_n1226_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<13> (Madd_n1226_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<14> (Madd_n1226_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<15> (Madd_n1226_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<16> (Madd_n1226_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<17> (Madd_n1226_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<18> (Madd_n1226_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<19> (Madd_n1226_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<20> (Madd_n1226_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<21> (Madd_n1226_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<22> (Madd_n1226_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<23> (Madd_n1226_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<24> (Madd_n1226_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<25> (Madd_n1226_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<26> (Madd_n1226_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<27> (Madd_n1226_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<28> (Madd_n1226_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1226_cy<29> (Madd_n1226_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1226_cy<30> (Madd_n1226_cy<30>)
+     XORCY:CI->O          93   0.180   2.196  Madd_n1226_xor<31> (n1226<31>)
+     LUT6:I0->O            1   0.203   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1869_o13 (Mmux_vectoring_vector[31]_PWR_4_o_MUX_1869_o12)
+     LUT6:I5->O            1   0.205   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1869_o16 (vectoring_vector[31]_PWR_4_o_MUX_1869_o)
+     LUT2:I1->O            1   0.205   0.000  Madd_n1229_lut<0> (Madd_n1229_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1229_cy<0> (Madd_n1229_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<1> (Madd_n1229_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<2> (Madd_n1229_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<3> (Madd_n1229_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<4> (Madd_n1229_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<5> (Madd_n1229_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<6> (Madd_n1229_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<7> (Madd_n1229_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<8> (Madd_n1229_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<9> (Madd_n1229_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<10> (Madd_n1229_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<11> (Madd_n1229_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<12> (Madd_n1229_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<13> (Madd_n1229_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<14> (Madd_n1229_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<15> (Madd_n1229_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<16> (Madd_n1229_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<17> (Madd_n1229_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<18> (Madd_n1229_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<19> (Madd_n1229_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<20> (Madd_n1229_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<21> (Madd_n1229_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<22> (Madd_n1229_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<23> (Madd_n1229_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<24> (Madd_n1229_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<25> (Madd_n1229_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<26> (Madd_n1229_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<27> (Madd_n1229_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<28> (Madd_n1229_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1229_cy<29> (Madd_n1229_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1229_cy<30> (Madd_n1229_cy<30>)
+     XORCY:CI->O          83   0.180   2.130  Madd_n1229_xor<31> (n1229<31>)
+     LUT6:I0->O            1   0.203   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1871_o12 (Mmux_vectoring_vector[31]_PWR_4_o_MUX_1871_o11)
+     LUT6:I5->O            1   0.205   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1871_o15 (vectoring_vector[31]_PWR_4_o_MUX_1871_o)
+     LUT2:I1->O            1   0.205   0.000  Madd_n1232_lut<0> (Madd_n1232_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1232_cy<0> (Madd_n1232_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<1> (Madd_n1232_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<2> (Madd_n1232_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<3> (Madd_n1232_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<4> (Madd_n1232_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<5> (Madd_n1232_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<6> (Madd_n1232_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<7> (Madd_n1232_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<8> (Madd_n1232_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<9> (Madd_n1232_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<10> (Madd_n1232_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<11> (Madd_n1232_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<12> (Madd_n1232_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<13> (Madd_n1232_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<14> (Madd_n1232_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<15> (Madd_n1232_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<16> (Madd_n1232_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<17> (Madd_n1232_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<18> (Madd_n1232_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<19> (Madd_n1232_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<20> (Madd_n1232_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<21> (Madd_n1232_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<22> (Madd_n1232_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<23> (Madd_n1232_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<24> (Madd_n1232_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<25> (Madd_n1232_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<26> (Madd_n1232_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<27> (Madd_n1232_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<28> (Madd_n1232_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1232_cy<29> (Madd_n1232_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1232_cy<30> (Madd_n1232_cy<30>)
+     XORCY:CI->O          79   0.180   2.103  Madd_n1232_xor<31> (n1232<31>)
+     LUT6:I0->O            1   0.203   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1873_o13 (Mmux_vectoring_vector[31]_PWR_4_o_MUX_1873_o12)
+     LUT6:I5->O            1   0.205   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1873_o16 (vectoring_vector[31]_PWR_4_o_MUX_1873_o)
+     LUT2:I1->O            1   0.205   0.000  Madd_n1235_lut<0> (Madd_n1235_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1235_cy<0> (Madd_n1235_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<1> (Madd_n1235_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<2> (Madd_n1235_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<3> (Madd_n1235_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<4> (Madd_n1235_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<5> (Madd_n1235_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<6> (Madd_n1235_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<7> (Madd_n1235_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<8> (Madd_n1235_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<9> (Madd_n1235_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<10> (Madd_n1235_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<11> (Madd_n1235_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<12> (Madd_n1235_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<13> (Madd_n1235_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<14> (Madd_n1235_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<15> (Madd_n1235_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<16> (Madd_n1235_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<17> (Madd_n1235_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<18> (Madd_n1235_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<19> (Madd_n1235_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<20> (Madd_n1235_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<21> (Madd_n1235_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<22> (Madd_n1235_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<23> (Madd_n1235_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<24> (Madd_n1235_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<25> (Madd_n1235_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<26> (Madd_n1235_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<27> (Madd_n1235_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<28> (Madd_n1235_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1235_cy<29> (Madd_n1235_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1235_cy<30> (Madd_n1235_cy<30>)
+     XORCY:CI->O          93   0.180   2.176  Madd_n1235_xor<31> (ADDERTREE_INTERNAL_Madd_411)
+     LUT5:I0->O            1   0.203   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1875_o13 (Mmux_vectoring_vector[31]_PWR_4_o_MUX_1875_o12)
+     LUT6:I5->O            1   0.205   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1875_o16 (vectoring_vector[31]_PWR_4_o_MUX_1875_o)
+     LUT2:I1->O            1   0.205   0.000  Madd_n1238_lut<0> (Madd_n1238_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1238_cy<0> (Madd_n1238_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<1> (Madd_n1238_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<2> (Madd_n1238_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<3> (Madd_n1238_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<4> (Madd_n1238_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<5> (Madd_n1238_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<6> (Madd_n1238_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<7> (Madd_n1238_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<8> (Madd_n1238_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<9> (Madd_n1238_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<10> (Madd_n1238_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<11> (Madd_n1238_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<12> (Madd_n1238_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<13> (Madd_n1238_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<14> (Madd_n1238_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<15> (Madd_n1238_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<16> (Madd_n1238_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<17> (Madd_n1238_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<18> (Madd_n1238_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<19> (Madd_n1238_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<20> (Madd_n1238_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<21> (Madd_n1238_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<22> (Madd_n1238_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<23> (Madd_n1238_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<24> (Madd_n1238_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<25> (Madd_n1238_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<26> (Madd_n1238_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<27> (Madd_n1238_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<28> (Madd_n1238_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1238_cy<29> (Madd_n1238_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1238_cy<30> (Madd_n1238_cy<30>)
+     XORCY:CI->O          81   0.180   2.096  Madd_n1238_xor<31> (ADDERTREE_INTERNAL_Madd_1911)
+     LUT5:I0->O            1   0.203   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1877_o13 (Mmux_vectoring_vector[31]_PWR_4_o_MUX_1877_o12)
+     LUT6:I5->O            1   0.205   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1877_o16 (vectoring_vector[31]_PWR_4_o_MUX_1877_o)
+     LUT2:I1->O            1   0.205   0.000  Madd_n1241_lut<0> (Madd_n1241_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1241_cy<0> (Madd_n1241_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<1> (Madd_n1241_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<2> (Madd_n1241_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<3> (Madd_n1241_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<4> (Madd_n1241_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<5> (Madd_n1241_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<6> (Madd_n1241_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<7> (Madd_n1241_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<8> (Madd_n1241_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<9> (Madd_n1241_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<10> (Madd_n1241_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<11> (Madd_n1241_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<12> (Madd_n1241_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<13> (Madd_n1241_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<14> (Madd_n1241_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<15> (Madd_n1241_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<16> (Madd_n1241_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<17> (Madd_n1241_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<18> (Madd_n1241_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<19> (Madd_n1241_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<20> (Madd_n1241_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<21> (Madd_n1241_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<22> (Madd_n1241_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<23> (Madd_n1241_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<24> (Madd_n1241_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<25> (Madd_n1241_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<26> (Madd_n1241_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<27> (Madd_n1241_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<28> (Madd_n1241_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1241_cy<29> (Madd_n1241_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n1241_cy<30> (Madd_n1241_cy<30>)
+     XORCY:CI->O          80   0.180   2.090  Madd_n1241_xor<31> (ADDERTREE_INTERNAL_Madd_1811)
+     LUT5:I0->O            1   0.203   0.580  Mmux_vectoring_vector[15]_PWR_4_o_MUX_1880_o13 (Mmux_vectoring_vector[15]_PWR_4_o_MUX_1880_o12)
+     LUT6:I5->O            1   0.205   0.580  Mmux_vectoring_vector[15]_PWR_4_o_MUX_1880_o16 (vectoring_vector[15]_PWR_4_o_MUX_1880_o)
+     LUT2:I1->O            1   0.205   0.000  Msub_vectoring_vector[31]_vectoring_vector[15]_sub_327_OUT<31:0>_lut<0> (Msub_vectoring_vector[31]_vectoring_vector[15]_sub_327_OUT<31:0>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Msub_vectoring_vector[31]_vectoring_vector[15]_sub_327_OUT<31:0>_cy<0> (Msub_vectoring_vector[31]_vectoring_vector[15]_sub_327_OUT<31:0>_cy<0>)
+     XORCY:CI->O           4   0.180   0.683  Msub_vectoring_vector[31]_vectoring_vector[15]_sub_327_OUT<31:0>_xor<1> (vectoring_vector[31]_vectoring_vector[15]_sub_327_OUT<1>)
+     INV:I->O              1   0.206   0.000  Msub_n0669_Madd_lut<1>_INV_0 (Msub_n0669_Madd_lut<1>)
+     XORCY:LI->O           1   0.136   0.684  Msub_n0669_Madd_xor<1> (n0669<1>)
+     LUT2:I0->O            1   0.203   0.924  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1881_o16 (Mmux_vectoring_vector[31]_PWR_4_o_MUX_1881_o15)
+     LUT6:I1->O            1   0.203   0.808  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1881_o17 (Mmux_vectoring_vector[31]_PWR_4_o_MUX_1881_o16)
+     LUT6:I3->O            1   0.205   0.580  Mmux_vectoring_vector[31]_PWR_4_o_MUX_1881_o18 (vectoring_vector[31]_PWR_4_o_MUX_1881_o)
+     LUT2:I1->O            1   0.205   0.000  Madd_vectoring_vector[15]_vectoring_vector[31]_add_338_OUT_lut<0> (Madd_vectoring_vector[15]_vectoring_vector[31]_add_338_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_vectoring_vector[15]_vectoring_vector[31]_add_338_OUT_cy<0> (Madd_vectoring_vector[15]_vectoring_vector[31]_add_338_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_vectoring_vector[15]_vectoring_vector[31]_add_338_OUT_cy<1> (Madd_vectoring_vector[15]_vectoring_vector[31]_add_338_OUT_cy<1>)
+     XORCY:CI->O           2   0.180   0.616  Madd_vectoring_vector[15]_vectoring_vector[31]_add_338_OUT_xor<2> (vectoring_vector[15]_vectoring_vector[31]_add_338_OUT<2>)
+     INV:I->O              1   0.206   0.000  Msub_n0676_Madd_lut<2>_INV_0 (Msub_n0676_Madd_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  Msub_n0676_Madd_cy<2> (Msub_n0676_Madd_cy<2>)
+     XORCY:CI->O           1   0.180   0.827  Msub_n0676_Madd_xor<3> (n0676<3>)
+     LUT4:I0->O            1   0.203   0.580  Mmux_vectoring_vector[15]_PWR_4_o_MUX_1884_o16 (Mmux_vectoring_vector[15]_PWR_4_o_MUX_1884_o15)
+     LUT5:I4->O            1   0.205   0.808  Mmux_vectoring_vector[15]_PWR_4_o_MUX_1884_o17 (Mmux_vectoring_vector[15]_PWR_4_o_MUX_1884_o16)
+     LUT6:I3->O            2   0.205   0.617  Mmux_vectoring_vector[15]_PWR_4_o_MUX_1884_o18 (vectoring_vector[15]_PWR_4_o_MUX_1884_o)
+     LUT3:I2->O            1   0.205   0.580  Msub_Vectoring.round_x<21:0> (Msub_Vectoring.round_x<21:0>)
+     LUT4:I3->O            1   0.205   0.000  Msub_Vectoring.round_x<21:0>_lut<0>1 (Msub_Vectoring.round_x<21:0>_lut<0>1)
+     MUXCY:S->O            1   0.172   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_0 (Msub_Vectoring.round_x<21:0>_cy<0>1)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_1 (Msub_Vectoring.round_x<21:0>_cy<0>2)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_2 (Msub_Vectoring.round_x<21:0>_cy<0>3)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_3 (Msub_Vectoring.round_x<21:0>_cy<0>4)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_4 (Msub_Vectoring.round_x<21:0>_cy<0>5)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_5 (Msub_Vectoring.round_x<21:0>_cy<0>6)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_6 (Msub_Vectoring.round_x<21:0>_cy<0>7)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_7 (Msub_Vectoring.round_x<21:0>_cy<0>8)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_8 (Msub_Vectoring.round_x<21:0>_cy<0>9)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_9 (Msub_Vectoring.round_x<21:0>_cy<0>10)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_10 (Msub_Vectoring.round_x<21:0>_cy<0>11)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_11 (Msub_Vectoring.round_x<21:0>_cy<0>12)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_12 (Msub_Vectoring.round_x<21:0>_cy<0>13)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_13 (Msub_Vectoring.round_x<21:0>_cy<0>14)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_14 (Msub_Vectoring.round_x<21:0>_cy<0>15)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_15 (Msub_Vectoring.round_x<21:0>_cy<0>16)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_16 (Msub_Vectoring.round_x<21:0>_cy<0>17)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_17 (Msub_Vectoring.round_x<21:0>_cy<0>18)
+     MUXCY:CI->O           1   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_18 (Msub_Vectoring.round_x<21:0>_cy<0>19)
+     MUXCY:CI->O           0   0.019   0.000  Msub_Vectoring.round_x<21:0>_cy<0>_19 (Msub_Vectoring.round_x<21:0>_cy<0>20)
+     XORCY:CI->O         107   0.180   2.124  Msub_Vectoring.round_x<21:0>_xor<0>_20 (Vectoring.round_x<21>)
+     LUT3:I0->O            2   0.205   0.845  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_mux_1_OUT141 (vectoring_vector[31]_GND_4_o_div_351/a[31]_GND_6_o_MUX_1062_o_mand1)
+     LUT4:I1->O            1   0.205   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_lut<0> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<0> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<1> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<2> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<3> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<4> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<4>)
+     MUXCY:CI->O          24   0.213   1.517  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0012_INV_1331_o_cy<5>)
+     LUT5:I0->O            6   0.203   0.992  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_GND_6_o_MUX_1118_o1101 (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_b[11]_add_29_OUT_Madd_lut<21>)
+     LUT4:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_lutdi (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<0> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<1> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<2> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<3> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<4> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<4>)
+     MUXCY:CI->O          43   0.213   1.793  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0013_INV_1330_o_cy<5>)
+     LUT5:I0->O            6   0.203   0.992  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1150_o1111 (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_31_OUT_Madd_lut<20>)
+     LUT4:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_lutdi (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<0> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<1> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<2> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<3> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<3>)
+     MUXCY:CI->O           8   0.213   1.167  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<4> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<4>)
+     LUT6:I0->O           22   0.203   1.478  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0014_INV_1329_o_cy<5>)
+     LUT5:I0->O            6   0.203   0.992  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1182_o1121 (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_33_OUT_Madd_lut<19>)
+     LUT4:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_lutdi (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<0> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<1> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<2> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<3> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<4> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<5>)
+     MUXCY:CI->O          48   0.213   1.864  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0015_INV_1328_o_cy<6>)
+     LUT5:I0->O            6   0.203   0.992  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1214_o1131 (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_35_OUT_Madd_lut<18>)
+     LUT4:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_lutdi (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<0> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<1> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<2> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<3> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<4> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<4>)
+     MUXCY:CI->O          13   0.213   0.933  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<5>)
+     LUT3:I2->O           22   0.205   1.478  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0016_INV_1327_o_cy<6>)
+     LUT5:I0->O            6   0.203   0.992  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1246_o1141 (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_37_OUT_Madd_lut<17>)
+     LUT4:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_lutdi (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<0> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<1> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<2> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<3> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<4> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<4>)
+     MUXCY:CI->O          27   0.213   1.221  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<5>)
+     LUT4:I3->O           20   0.205   1.437  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0017_INV_1326_o_cy<6>)
+     LUT5:I0->O            6   0.203   0.992  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1278_o1151 (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_39_OUT_Madd_lut<16>)
+     LUT4:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_lutdi (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<0> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<1> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<2> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<3> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<4> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<4>)
+     MUXCY:CI->O           2   0.213   0.617  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<5>)
+     LUT5:I4->O           54   0.205   1.918  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0018_INV_1325_o_cy<6>)
+     LUT5:I0->O            6   0.203   1.089  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1310_o161 (vectoring_vector[31]_GND_4_o_div_351/a[31]_a[31]_MUX_1316_o)
+     LUT5:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0019_INV_1324_o_lutdi5 (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0019_INV_1324_o_lutdi5)
+     MUXCY:DI->O           2   0.339   0.617  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0019_INV_1324_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0019_INV_1324_o_cy<5>)
+     LUT6:I5->O           54   0.205   1.918  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0019_INV_1324_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0019_INV_1324_o_cy<6>)
+     LUT5:I0->O            6   0.203   0.992  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1342_o1171 (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_43_OUT_Madd_lut<14>)
+     LUT4:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_lutdi (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<0> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<1> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<2> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<3> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<4> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<6>)
+     MUXCY:CI->O          52   0.213   1.905  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0020_INV_1323_o_cy<7>)
+     LUT5:I0->O            6   0.203   0.992  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1374_o1181 (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_45_OUT_Madd_lut<13>)
+     LUT4:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_lutdi (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<0> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<1> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<2> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<3> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<4> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<5>)
+     MUXCY:CI->O          33   0.213   1.306  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<6>)
+     LUT3:I2->O           20   0.205   1.437  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0021_INV_1322_o_cy<7>)
+     LUT5:I0->O            6   0.203   0.992  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1406_o1191 (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_47_OUT_Madd_lut<12>)
+     LUT4:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_lutdi (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<0> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<1> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<2> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<3> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<4> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<5>)
+     MUXCY:CI->O          33   0.213   1.306  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<6>)
+     LUT4:I3->O           22   0.205   1.478  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0022_INV_1321_o_cy<7>)
+     LUT5:I0->O            6   0.203   1.089  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1438_o1101 (vectoring_vector[31]_GND_4_o_div_351/a[31]_a[31]_MUX_1448_o)
+     LUT5:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0023_INV_1320_o_lutdi5 (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0023_INV_1320_o_lutdi5)
+     MUXCY:DI->O           1   0.145   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0023_INV_1320_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0023_INV_1320_o_cy<5>)
+     MUXCY:CI->O           6   0.213   0.745  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0023_INV_1320_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0023_INV_1320_o_cy<6>)
+     LUT5:I4->O           74   0.205   2.050  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0023_INV_1320_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0023_INV_1320_o_cy<7>)
+     LUT5:I0->O            6   0.203   1.089  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1470_o1111 (vectoring_vector[31]_GND_4_o_div_351/a[31]_a[31]_MUX_1481_o)
+     LUT5:I0->O            0   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0024_INV_1319_o_lutdi5 (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0024_INV_1319_o_lutdi5)
+     MUXCY:DI->O           1   0.145   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0024_INV_1319_o_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0024_INV_1319_o_cy<5>)
+     MUXCY:CI->O           2   0.213   0.617  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0024_INV_1319_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0024_INV_1319_o_cy<6>)
+     LUT6:I5->O           58   0.205   1.945  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0024_INV_1319_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0024_INV_1319_o_cy<7>)
+     LUT5:I0->O            6   0.203   1.089  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1502_o1101 (vectoring_vector[31]_GND_4_o_div_351/a[31]_a[31]_MUX_1512_o)
+     LUT5:I0->O            1   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0025_INV_1318_o_lut<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0025_INV_1318_o_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0025_INV_1318_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0025_INV_1318_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0025_INV_1318_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0025_INV_1318_o_cy<7>)
+     MUXCY:CI->O          84   0.213   2.116  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0025_INV_1318_o_cy<8> (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_55_OUT_Madd_lut<9>)
+     LUT5:I0->O            6   0.203   1.089  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1534_o1111 (vectoring_vector[31]_GND_4_o_div_351/a[31]_a[31]_MUX_1545_o)
+     LUT5:I0->O            1   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0026_INV_1317_o_lut<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0026_INV_1317_o_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0026_INV_1317_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0026_INV_1317_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0026_INV_1317_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0026_INV_1317_o_cy<7>)
+     MUXCY:CI->O          68   0.213   2.011  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0026_INV_1317_o_cy<8> (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_57_OUT_Madd_lut<8>)
+     LUT5:I0->O            6   0.203   1.089  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1566_o1121 (vectoring_vector[31]_GND_4_o_div_351/a[31]_a[31]_MUX_1578_o)
+     LUT5:I0->O            1   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0027_INV_1316_o_lut<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0027_INV_1316_o_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0027_INV_1316_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0027_INV_1316_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0027_INV_1316_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0027_INV_1316_o_cy<7>)
+     MUXCY:CI->O          90   0.213   2.156  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0027_INV_1316_o_cy<8> (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_59_OUT_Madd_lut<7>)
+     LUT5:I0->O            6   0.203   1.089  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1598_o1131 (vectoring_vector[31]_GND_4_o_div_351/a[31]_a[31]_MUX_1611_o)
+     LUT5:I0->O            1   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0028_INV_1315_o_lut<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0028_INV_1315_o_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0028_INV_1315_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0028_INV_1315_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0028_INV_1315_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0028_INV_1315_o_cy<7>)
+     MUXCY:CI->O          74   0.213   2.050  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0028_INV_1315_o_cy<8> (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_61_OUT_Madd_lut<6>)
+     LUT5:I0->O            6   0.203   1.089  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1630_o1141 (vectoring_vector[31]_GND_4_o_div_351/a[31]_a[31]_MUX_1644_o)
+     LUT5:I0->O            1   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0029_INV_1314_o_lut<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0029_INV_1314_o_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0029_INV_1314_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0029_INV_1314_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0029_INV_1314_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0029_INV_1314_o_cy<7>)
+     MUXCY:CI->O          97   0.213   2.202  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0029_INV_1314_o_cy<8> (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_63_OUT[31:0]_Madd_lut<5>)
+     LUT5:I0->O            6   0.203   1.089  vectoring_vector[31]_GND_4_o_div_351/Mmux_a[31]_a[31]_MUX_1662_o1151 (vectoring_vector[31]_GND_4_o_div_351/a[31]_a[31]_MUX_1677_o)
+     LUT5:I0->O            1   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0030_INV_1313_o_lut<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0030_INV_1313_o_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0030_INV_1313_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0030_INV_1313_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0030_INV_1313_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0030_INV_1313_o_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0030_INV_1313_o_cy<8> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0030_INV_1313_o_cy<8>)
+     MUXCY:CI->O          79   0.213   2.083  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0030_INV_1313_o_cy<9> (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_65_OUT[31:0]_Madd_lut<4>)
+     LUT5:I0->O            5   0.203   1.059  vectoring_vector[31]_GND_4_o_div_351/Mmux_n273371 (vectoring_vector[31]_GND_4_o_div_351/n2733<15>)
+     LUT5:I0->O            1   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0031_INV_1312_o_lut<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0031_INV_1312_o_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0031_INV_1312_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0031_INV_1312_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0031_INV_1312_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0031_INV_1312_o_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0031_INV_1312_o_cy<8> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0031_INV_1312_o_cy<8>)
+     MUXCY:CI->O          88   0.213   2.143  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0031_INV_1312_o_cy<9> (vectoring_vector[31]_GND_4_o_div_351/Madd_a[31]_GND_6_o_add_67_OUT[31:0]_Madd_lut<3>)
+     LUT5:I0->O            2   0.203   0.961  vectoring_vector[31]_GND_4_o_div_351/Mmux_n273761 (vectoring_vector[31]_GND_4_o_div_351/n2737<14>)
+     LUT5:I0->O            1   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0032_INV_1311_o_lut<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0032_INV_1311_o_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0032_INV_1311_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0032_INV_1311_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0032_INV_1311_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0032_INV_1311_o_cy<7>)
+     MUXCY:CI->O           2   0.213   0.617  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0032_INV_1311_o_cy<8> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0032_INV_1311_o_cy<8>)
+     LUT6:I5->O           31   0.205   1.622  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0032_INV_1311_o_cy<9> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0032_INV_1311_o_cy<9>)
+     LUT5:I0->O            2   0.203   0.961  vectoring_vector[31]_GND_4_o_div_351/Mmux_n260751 (vectoring_vector[31]_GND_4_o_div_351/n2607<13>)
+     LUT5:I0->O            1   0.203   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0033_INV_1310_o_lut<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0033_INV_1310_o_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0033_INV_1310_o_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0033_INV_1310_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0033_INV_1310_o_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0033_INV_1310_o_cy<7>)
+     MUXCY:CI->O           2   0.213   0.617  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0033_INV_1310_o_cy<8> (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0033_INV_1310_o_cy<8>)
+     LUT5:I4->O            1   0.205   0.000  vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0033_INV_1310_o_cy<9>1 (vectoring_vector[31]_GND_4_o_div_351/Mcompar_BUS_0033_INV_1310_o_cy<9>1)
+     MUXCY:S->O            1   0.172   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<0> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<1> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<2> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<3> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<4> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<5> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<6> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<7> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<8> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<9> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<10> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<11> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<12> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<13> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<14> (vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_cy<14>)
+     XORCY:CI->O           1   0.180   0.580  vectoring_vector[31]_GND_4_o_div_351/Madd_GND_6_o_BUS_0001_add_70_OUT[32:0]_xor<15> (vectoring_vector[31]_GND_4_o_div_351/GND_6_o_BUS_0001_add_70_OUT[32:0]<15>)
+     LUT3:I2->O            1   0.205   0.579  vectoring_vector[31]_GND_4_o_div_351/Mmux_o71 (vectorin_result_31_OBUF)
+     OBUF:I->O                 2.571          vectorin_result_31_OBUF (vectorin_result<31>)
+    ----------------------------------------
+    Total                    172.318ns (48.125ns logic, 124.193ns route)
+                                       (27.9% logic, 72.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 35.10 secs
+ 
+--> 
+
+Total memory usage is 394312 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
