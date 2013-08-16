@@ -2,7 +2,7 @@
 ## Eclipse
 #################
 
-Cordic/
+./Cordic/
 
 *.pydevproject
 .project

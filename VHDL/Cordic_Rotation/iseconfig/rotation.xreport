@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-08-11T18:49:47</DateModified>
+  <DateModified>2013-08-15T09:24:19</DateModified>
   <ModuleName>rotation</ModuleName>
   <SummaryTimeStamp>2013-08-11T18:41:52</SummaryTimeStamp>
-  <SavedFilePath>C:/Courses/Cordic/Cordic_Rotation/iseconfig/rotation.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Courses/Cordic/Cordic_Rotation\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Gord/Documents/GitHub/Seng440/VHDL/Cordic_Rotation/iseconfig/rotation.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Gord/Documents/GitHub/Seng440/VHDL/Cordic_Rotation\</ImplementationReportsDirectory>
   <DateInitialized>2013-08-11T11:34:15</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
