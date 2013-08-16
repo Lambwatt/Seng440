@@ -66,7 +66,7 @@ int32_t rotation(int32_t vector, int32_t angle){
 
 	//rounding_term = (1<<1);
 	// Remaining iterations
-	for(i = 1; i - ITERATIONS; i++){
+	for(i = 1; i < ITERATIONS; i++){
 		arc_tan = arctan_degrees[i];
 		if(int_z < 0){//work on pipelining by interspursing x and y operations
 			//changed to match assembler. compiler should further optimize		
@@ -77,12 +77,12 @@ int32_t rotation(int32_t vector, int32_t angle){
 		rounding_term = 1<<i;
 		// if there are bits high in the soon to be truncated region
 		if(rounding_mask & round_x){//can this be converted into a comparison with the result used to mathematically control the next line?
-			round_x |= rounding_term;//(1<<i);		// Von Neumann rounding
+			round_x |= (1<<i);		// Von Neumann rounding
 		}
 		if(rounding_mask & round_y){//See previous branch
-			round_y |= rounding_term;//(1<<i);		// Von Neumann rounding
+			round_y |= (1<<i);		// Von Neumann rounding
 		}
-		rounding_mask|=(rounding_term>>1);//unnecessary on last iteration
+		rounding_mask|=(1<<(i-1));//unnecessary on last iteration
 
 		cur_x = cur_x - (round_y>>i);
 		cur_y = cur_y + (round_x>>i);
