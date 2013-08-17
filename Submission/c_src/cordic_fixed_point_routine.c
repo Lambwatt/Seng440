@@ -21,7 +21,7 @@ static int32_t const arctan_degrees[ITERATIONS] = {754974720, 445687602, 2354890
 /*
 vector: High 16 bits are x.  Low 16 bits are y. Application engineer assumed to scale values themselves.
 angle: assumed to be in range [-90,90] scaled to 32 bit accuracy (2^31)/90 */
-int32_t rotation(int32_t vector, int32_t angle){
+static int32_t rotation(int32_t vector, int32_t angle){
 	register int i, arc_tan;
 	register int32_t cur_x, cur_y, int_z, rounding_mask, round_x, round_y;
 
@@ -98,7 +98,7 @@ int32_t rotation(int32_t vector, int32_t angle){
 /*
 Magnitude returned as high two bytes.
 Angle returned as low two bytes. */
-int32_t vectoring(int32_t vector){
+static int32_t vectoring(int32_t vector){
 	register int i, arc_tan;
 	register int32_t cur_x, cur_y, int_z, rounding_mask, round_x, round_y;
 
