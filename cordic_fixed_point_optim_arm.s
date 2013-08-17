@@ -180,32 +180,34 @@ rotation:
 	smull	r2, r3, r1, r3
 	mov	r2, r3, asr #4
 	ldr	r1, [fp, #-40]
-	mov	r3, r1, asr #31
-	rsb	r3, r3, r2
-	str	r3, [fp, #-40]
-	ldr	r2, [fp, #-36]
-	mov	r2, r2, asl #10
-	str	r2, [fp, #-36]
-	ldr	r3, .L9+4
-	ldr	r1, [fp, #-36]
-	smull	r2, r3, r1, r3
 	mov	r2, r3, asr #4
 	ldr	r1, [fp, #-36]
 	mov	r3, r1, asr #31
 	rsb	r3, r3, r2
 	str	r3, [fp, #-36]
-	ldr	r2, [fp, #-36]
+	ldr	r2, [fp, #-32]
+	mov	r2, r2, asl #10
+	str	r2, [fp, #-32]
+	ldr	r3, .L9+4
+	ldr	r1, [fp, #-32]
+	smull	r2, r3, r1, r3
+	mov	r2, r3, asr #4
+	ldr	r1, [fp, #-32]
+	mov	r3, r1, asr #31
+	rsb	r3, r3, r2
+	str	r3, [fp, #-32]
+	ldr	r2, [fp, #-32]
 	mov	r3, r2, asl #16
 	mov	r3, r3, lsr #16
-	str	r3, [fp, #-36]
-	ldr	r3, [fp, #-40]
+	str	r3, [fp, #-32]
+	ldr	r3, [fp, #-36]
 	mov	r3, r3, asl #16
-	str	r3, [fp, #-40]
-	ldr	r1, [fp, #-40]
-	ldr	r2, [fp, #-36]
+	str	r3, [fp, #-36]
+	ldr	r1, [fp, #-36]
+	ldr	r2, [fp, #-32]
 	orr	r1, r1, r2
-	str	r1, [fp, #-40]
-	ldr	r3, [fp, #-40]
+	str	r1, [fp, #-36]
+	ldr	r3, [fp, #-36]
 	mov	r0, r3
 	add	sp, fp, #0
 	ldmfd	sp!, {fp}
@@ -752,5 +754,3 @@ main:
 	.word	.LC4
 	.word	.LC5
 	.size	main, .-main
-	.ident	"GCC: (Sourcery G++ Lite 2008q3-72) 4.3.2"
-	.section	.note.GNU-stack,"",%progbits

@@ -32,12 +32,18 @@ def count(section, f_name, l_branches, iter)
 	loop_instructions = {};
 	in_func = false
 	in_loop = false
+	p "size of target: "+section.split("\n").size.to_s
+
 	section.split("\n").each{|i|
 		ins = i[/^[\s\.]*[A-Za-z0-9]*[\:\s]*/].strip
+		#p ins
 		unless in_func
+			#"not in function"
 			in_func=true if ins[0...-1]==f_name
 		else	
+			
 			if ins=="" or ins == "stmfd"
+				#p "hit empty or stmfd case."
 				next
 			elsif ins=="ldmfd"
 				in_func=false
@@ -61,6 +67,7 @@ def count(section, f_name, l_branches, iter)
 	count.each_key{|k|
 		p ""+k+": "+count[k].to_s
 	}
+	p "program complete."
 end
 
 file_name = ARGV[0]
