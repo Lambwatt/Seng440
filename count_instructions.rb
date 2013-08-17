@@ -53,7 +53,7 @@ def count(section, f_name, l_branches, iter)
 					in_loop = true if ins=="."+l_branches+":"
 				else
 					add_to_count(ins, loop_instructions) unless ins[0]=="."
-					in_loop = false if i.match(/[\s]*ble[\s]*\.#{l_branches}/)
+					in_loop = false if i.match(/[\s]*b[a-z]*[\s]*\.#{l_branches}/)
 				end
 			end	
 		end
