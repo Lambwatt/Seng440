@@ -44,18 +44,30 @@ int32_t rotation(int32_t vector, int32_t angle){
 	register int32_t round_y;
 	
 	rounding_mask = 0;
+	__asm__("mov r1, r7");
 
 	cur_x = vector >> 16;		// x is in top two bytes
+	__asm__("mov r3, r6");
+	
 	vector = vector << 16;		// push low bytes to far left so negative will propagate
+	
 	cur_y = vector >> 16;		// y is now in top two bytes
+	__asm__("mov r3, r5");
 
 	int_z = angle << ANGLE_SCALE;
+	__asm__("mov r1, r4");
 
 	round_x = cur_x;
+	__asm__("mov r1, r3");
 	round_y = cur_y;
+	__asm__("mov r1, r2");
 
 	// First iteration, no division or rounding required
-	arc_tan = arctan_degrees[0];
+	i = 0;
+	__asm__("mov r1, r0");
+	
+	arc_tan = arctan_degrees[i];
+	//__asm__("mov r1, r0");
 	if(int_z < 0){
 		arc_tan *= -1;
 		round_x *= -1;
