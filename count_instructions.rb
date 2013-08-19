@@ -27,7 +27,7 @@ def merge_counts(count1, count2)
 	return hash
 end
 
-def count(section, f_name, l_branches, iter)
+def count(section, f_name, l_branches, iter, mode)
 	instructions = {};
 	loop_instructions = {};
 	in_func = false
@@ -35,17 +35,21 @@ def count(section, f_name, l_branches, iter)
 	p "size of target: "+section.split("\n").size.to_s
 
 	section.split("\n").each{|i|
-		ins = i[/^[\s\.]*[A-Za-z0-9]*[\:\s]*/].strip
+		ins = i[/^[\s\.]*[A-Za-z\_0-9]*[\:\s]*/].strip
 		#p ins
 		unless in_func
 			#"not in function"
-			in_func=true if ins[0...-1]==f_name
+			#p "looking for StartFunc_"+f_name+" but found "+ins
+			#p "starting at "+ins  if (mode==nil and ins[0...-1]==f_name) or (mode=="inline" and ins=="StartFunc_"+f_name)
+
+			in_func=true if (mode==nil and ins[0...-1]==f_name) or (mode=="inline" and ins=="StartFunc_"+f_name)
 		else	
 			
 			if ins=="" or ins == "stmfd"
 				#p "hit empty or stmfd case."
 				next
-			elsif ins=="ldmfd"
+			elsif (mode == nil and ins=="ldmfd") or (mode=="inline" and ins=="EndFunc_"+f_name)
+				#p "terminating instruction = "+ins+". mode = "+mode;
 				in_func=false
 			else
 				unless in_loop
@@ -74,6 +78,11 @@ file_name = ARGV[0]
 function_name = ARGV[1]
 l_branches = ARGV[2]
 iter = ARGV[3]
+if(ARGV.size>=4)
+	mode = ARGV[4]
+else
+	mode = nil
+end
 read_file(file_name){|f|
-		count(f.read, function_name, l_branches, iter)
+		count(f.read, function_name, l_branches, iter, mode)
 }
