@@ -4,10 +4,10 @@
 #include <stdint.h>
 
 
-float arctan_fraction_float(int16_t, int16_t);
-float arctan_float(int16_t);
-float cos_float(int32_t angle);
-float sin_float(int32_t angle);
+float arctan_fraction_float(float, float);
+float arctan_float(float);
+float cos_float(float);
+float sin_float(float);
 						
 int16_t arctan_fraction_routine(int16_t, int16_t);
 int16_t arctan_routine(int16_t);

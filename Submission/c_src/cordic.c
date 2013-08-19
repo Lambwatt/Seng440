@@ -20,51 +20,60 @@ int main(void){
 		correctSin = sin(angle*PI/180);
 		correctCos = cos(angle*PI/180);
 
-		printf("Correct values: Angle = %i, Sin = %f, Cos = %f", angle, correctSin, correctCos);
+		printf("\n\nCorrect values: Angle = %i, Sin = %f, Cos = %f", angle, correctSin, correctCos);
 
-		printf("\n\nSin results:\n");
-		printf("Function| Value		| Error		");
+		printf("\nSin results:\n");
+		printf("Function| Value		| Error		\n");
 
 		tmp_float = sin_float((float)angle);
 		error = abs(correctSin - tmp_float);
-		printf("Float		| %07f		|	%07f	\n",tmp_float, error);
+		printf("Float	| %07f		|	%07f	\n",tmp_float, error);
 		
-		temp = sin_routine(angle<<8);
+		temp = sin_routine(angle);//<<8);
+		printf("int returned = %i",temp);
 		error = abs(correctSin - (float)temp/(float)(1<<8));
 		printf("Routine	| %07f		|	%07f	\n",(float)temp/(float)(1<<8), error);
 	
-		temp = sin_inline(angle<<8);
+		temp = sin_inline(angle);//<<8);
+		printf("int returned = %i",temp);
 		error = abs(correctSin - (float)temp/(float)(1<<8));
 		printf("Inline	| %07f		|	%07f	\n",(float)temp/(float)(1<<8), error);
 	
-		temp = sin_macro(angle<<8);
+		temp = sin_macro(angle);//<<8);
+		printf("int returned = %i",temp);
 		error = abs(correctSin - (float)temp/(float)(i<<8));
-		printf("Macro		| %07f		|	%07f	\n", (float)temp/(float)(1<<8), error);
+		printf("Macro	| %07f		|	%07f	\n", (float)temp/(float)(1<<8), error);
 		
-		temp = sin_optimized(angle<<8);
+		temp = sin_optimized(angle);//<<8);
+		printf("int returned = %i",temp);
 		error = abs(correctSin - (float)temp/(float)(1<<8));
 		printf("Optimizd| %07f		|	%07f	\n", (float)temp/(float)(1<<8), error);
 	
 		printf("\nCos results:\n");
-		printf("Function| Value		| Error		");
+		printf("Function| Value		| Error		\n");
 
-		tmp_float = cos_float(angle);
+		tmp_float = cos_float((float)angle);
+		printf("int returned = %i",temp);
 		error = abs(correctCos - tmp_float);
-		printf("Float		| %07f		|	%07f	\n",tmp_float, error);
+		printf("Float	| %07f		|	%07f	\n",tmp_float, error);
 		
-		temp = cos_routine(angle<<8);
+		temp = cos_routine(angle);//<<8);
+		printf("int returned = %i",temp);
 		error = abs(correctCos - (float)temp/(float)(1<<8));
 		printf("Routine	| %07f		|	%07f	\n",(float)temp/(float)(1<<8), error);
 	
-		temp = cos_inline(angle<<8);
+		temp = cos_inline(angle);//<<8);
+		printf("int returned = %i",temp);
 		error = abs(correctCos - (float)temp/(float)(1<<8));
 		printf("Inline	| %07f		|	%07f	\n",(float)temp/(float)(1<<8), error);
 	
-		temp = cos_macro(angle<<8);
+		temp = cos_macro(angle);//<<8);
+		printf("int returned = %i",temp);
 		error = abs(correctCos - (float)temp/(float)(1<<8));
-		printf("Macro		| %07f		|	%07f	\n",(float)temp/(float)(1<<8), error);
+		printf("Macro	| %07f		|	%07f	\n",(float)temp/(float)(1<<8), error);
 		
-		temp = cos_optimized(angle<<8);
+		temp = cos_optimized(angle);//<<8);
+		printf("int returned = %i",temp);
 		error = abs(correctCos - (float)temp/(float)(1<<8));
 		printf("Optimizd| %07f		|	%07f	\n",(float)temp/(float)(1<<8), error);
 	}
