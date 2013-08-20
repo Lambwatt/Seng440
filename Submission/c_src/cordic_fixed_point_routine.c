@@ -166,7 +166,7 @@ static int32_t vectoring(int32_t vector){
 	int_z &= TWO_BYTE_MASK;		// ensure it's 16 bits
 
 	cur_x = cur_x << 16;	// Magnitude - high two bytes of returned value
-	cur_x |= int_z;			// Angle - low two bytes of the returned value
+	cur_x |= int_z;		// Angle - low two bytes of the returned value
 
 	return cur_x;
 }
