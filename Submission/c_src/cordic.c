@@ -1,4 +1,3 @@
-
 #include "cordic.h"
 #include <stdint.h>
 #include <stdio.h>
